@@ -25,7 +25,8 @@ test('workshop correctly accepts inline comments in Python calculations',async({
  await page.keyboard.insertText('name = "Derrick"\nuniversity = "DeKUT"\ncourse = "Computer Science"\nyear = 1\ncompleted = 7\npending = 3\ntotal = completed + pending # comment\npercentage = 100 * completed / total # percentage\nprint(name)\nprint(university)\nprint(course)\nprint(percentage)');
  await page.getByRole('button',{name:'Run project checks'}).click();
  await expect(page.getByText(/Correct: required variables/)).toBeVisible();
- await page.reload();
+ await expect(page).toHaveURL(/\/lesson\/py-01\?step=1&milestone=complete/);
+ await page.goto('/workshop');
  await expect(page.locator('.cm-content')).toContainText('total = completed + pending');
 });
 
@@ -52,21 +53,28 @@ test('passing the workshop milestone returns to the next unlocked learning step'
 });
 
 test('mastered lessons permit exploration without changing stored progress',async({page})=>{
+ // Seed through the public, validated import workflow: this keeps IndexedDB
+ // and the in-memory Zustand store in sync and avoids a startup write race.
+ await page.goto('/progress');
+ await expect(page.getByRole('button',{name:'Import JSON'})).toBeVisible();
+ const nine=Array.from({length:9},(_,i)=>i+1);
+ const before={visited:nine,completedSteps:nine,simulationPassed:true,quizPassed:true,predictPassed:true,repairPassed:true,buildPassed:true,projectDone:true,mainDone:true,attempts:2,bestScore:100,lastScore:100,hintsUsed:0,savedCode:'x = 10\nprint(x)',projectCode:'baseline',updatedAt:new Date().toISOString()};
+ const backup={application:'CODEVERSE',schemaVersion:2,exportedAt:new Date().toISOString(),progress:{'py-01':before}};
+ await page.locator('input[type="file"]').setInputFiles({name:'codeverse-progress-v2.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});
+ await expect(page.getByText('Validated backup imported successfully.')).toBeVisible();
  await page.goto('/lesson/py-01');
- const before=await page.evaluate(async()=>{
-  const nine=Array.from({length:9},(_,i)=>i+1);
-  const p={visited:nine,completedSteps:nine,simulationPassed:true,quizPassed:true,predictPassed:true,repairPassed:true,buildPassed:true,projectDone:true,mainDone:true,attempts:2,bestScore:100,lastScore:100,hintsUsed:0,savedCode:'x = 10\nprint(x)',projectCode:'baseline',updatedAt:new Date().toISOString()};
-  await new Promise<void>((resolve,reject)=>{const request=indexedDB.open('CODEVERSE_DB',1);request.onsuccess=()=>{const db=request.result;const tx=db.transaction('settings','readwrite');tx.objectStore('settings').put({'py-01':p},'codeverse-progress-v2');tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>reject(tx.error)};request.onerror=()=>reject(request.error)});
-  return p;
- });
- await page.reload();
  await expect(page.getByText(/Review mode · this lesson is already mastered/)).toBeVisible();
  await expect(page.getByRole('tab',{name:/9 Study Intelligence/})).toBeEnabled();
  await page.getByRole('button',{name:/Review next step/}).click();
  await page.goto('/workshop');
  await expect(page.getByText(/Review mode · project checks still work/)).toBeVisible();
  await page.getByRole('button',{name:'Restore starter'}).click();
- const after=await page.evaluate(async()=>{return await new Promise<any>((resolve,reject)=>{const request=indexedDB.open('CODEVERSE_DB',1);request.onsuccess=()=>{const db=request.result;const tx=db.transaction('settings','readonly');const get=tx.objectStore('settings').get('codeverse-progress-v2');get.onsuccess=()=>resolve(get.result['py-01']);get.onerror=()=>reject(get.error)};request.onerror=()=>reject(request.error)})});
+ await page.reload();
+ await page.goto('/progress');
+ const after=await page.evaluate(async()=>await new Promise<any>((resolve,reject)=>{
+  const request=indexedDB.open('CODEVERSE_DB',1);
+  request.onsuccess=()=>{const db=request.result;const tx=db.transaction('settings','readonly');const get=tx.objectStore('settings').get('codeverse-progress-v2');get.onsuccess=()=>{resolve(get.result['py-01']);db.close();};get.onerror=()=>reject(get.error);};request.onerror=()=>reject(request.error);
+ }));
  expect(after).toEqual(before);
 });
 
