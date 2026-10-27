@@ -335,3 +335,25 @@ Next action:
 ---
 
 *End of CODEVERSE Master Implementation Plan v1.0.*
+
+---
+
+## Engineering change appendix — v0.6.0-alpha.1 (27 October 2026)
+
+The accepted `v0.5.0-alpha.1` user baseline (`7b180e5`) was used as the starting point for the v0.6 source upgrade. This release implements *alpha learning laboratory foundations* for Phases 9–12, not unrestricted production executors.
+
+**Phase 1–8 patch:** Python subset inline comment lexing; explicit sequential checkpoint gates; local v2 progress and v1 migration; assessment, project and integration evidence; saved work resume; prerequisite protection on direct routes. Editing previously validated project/journal evidence revokes the relevant pass state until it is revalidated.
+
+**Phase 9 SQL:** 24 ordered query topics based on the cheat sheet, 9-step instructional entries, select/filter visual experiment with a known dataset, and a separately executable SQLite reference program with transactions and joins.
+
+**Phase 10 Pandas:** 25 ordered topics, data filter/group/sort/clean visual experiment, and a separately executable Pandas DataFrame lab.
+
+**Phase 11 NumPy:** 24 ordered topics, computed array/broadcast/reshape/matrix/mean experiments, and an independent NumPy demonstration.
+
+**Phase 12 Machine Learning:** 16 foundational topics, bounded JavaScript gradient descent with model parameter and loss visualization, honest held-out evaluation, and a scikit-learn reference example. No real-world prediction suitability is implied.
+
+**Educational assessment honesty:** Browser experiments are computed in JavaScript; full-domain sample snippets remain references. Advanced Python external terminal outputs and engineering journals are validated as self-reported evidence, not as authenticated code execution. The learner retains responsibility for local execution. This source is an alpha milestone; consult `docs/PHASES_0_TO_12_STATUS.md` before claiming full phase acceptance.
+
+**Verification:** `node scripts/kernel-smoke.cjs`, `bash scripts/smoke-engine.sh`, `python3 -m unittest discover -s tests_python -v`, `python3 scripts/verify_lessons.py`, `tsc -p tsconfig.kernel.json`, `node scripts/syntax-check.cjs`; Ubuntu follow-up `bash scripts/verify-release.sh` and `npm run test:e2e`.
+
+**Sources:** `src/lessons/catalog.ts` orders the worlds; `src/worlds/*/lessons.json` hold the authored lesson contracts; `src/engine/domains/experiments.ts` is the bounded numerical engine; `src/storage/progress.ts` owns schema migration and unlock contracts; `src/app/DomainLab.tsx` renders domain lessons; `examples/` contains full Python execution examples.

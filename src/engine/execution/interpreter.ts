@@ -31,13 +31,14 @@ function evaluate(source: string, bindings: Record<string,string>, heap: Record<
   const op=findArithmetic(s); if (op) { const [symbol,i]=op; const left=evaluate(s.slice(0,i),bindings,heap).value; const right=evaluate(s.slice(i+symbol.length),bindings,heap).value; if (symbol==='+' && typeof left === 'string' && typeof right === 'string') return {value:left+right}; if (typeof left !== 'number' || typeof right !== 'number') throw new UnsupportedSyntax('Arithmetic requires two numbers (or two strings for +)'); if ((symbol==='/' || symbol==='//' || symbol==='%') && right===0) throw new UnsupportedSyntax('ZeroDivisionError: division by zero'); const result=symbol==='+' ? left+right : symbol==='-' ? left-right : symbol==='*' ? left*right : symbol==='/' ? left/right : symbol==='//' ? Math.floor(left/right) : ((left%right)+right)%right; return {value: result}; }
   throw new UnsupportedSyntax(`Unsupported expression: ${s}. Supported: variables, simple literals, lists, indexing, arithmetic, len(), print().`);
 }
+function stripComment(raw:string):string{let quote='';let escaped=false;for(let i=0;i<raw.length;i++){const c=raw[i];if(quote){if(c===quote&&!escaped)quote='';if(c==='\\'&&!escaped)escaped=true;else escaped=false;}else if(c==='\"'||c==="'")quote=c;else if(c==='#')return raw.slice(0,i).trimEnd();}return raw;}
 export function executeSubset(source:string): Trace {
   if (source.length > 6000 || source.split('\n').length > 120) throw new UnsupportedSyntax('Example exceeds local tracer limits (6000 characters / 120 lines).');
   const bindings:Record<string,string>={}; const heap:Record<string,HeapObject>={}; const stdout:string[]=[];
   let nextObject=0; const events:Snapshot[]=[{step:0,line:0,description:'Ready — no statements executed.',bindings:{},objects:{},stdout:[],kind:'start'}];
   const push=(line:number,description:string,kind:Snapshot['kind']) => events.push({step:events.length,line,description,bindings:clone(bindings),objects:clone(heap),stdout:[...stdout],kind});
   for (const [position,raw] of source.split('\n').entries()) {
-    const line=position+1; const text=raw.trim(); if(!text || text.startsWith('#')) continue;
+    const line=position+1; const text=stripComment(raw).trim(); if(!text || text.startsWith('#')) continue;
     if (raw !== raw.trimStart()) throw new UnsupportedSyntax('Indented code is not supported by the subset tracer; use your local Python interpreter for this lesson.', line);
     if (events.length>100) throw new UnsupportedSyntax('Execution limit reached (100 steps).',line);
     const assignment=text.match(/^([A-Za-z_]\w*)\s*=\s*(.+)$/);

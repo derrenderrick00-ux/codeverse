@@ -34,3 +34,13 @@ export function gradeVariablesBuild(code:string):Grade {
  return {pass:true,messages:['Output and final Python name bindings verified.']};
  }catch(e){return {pass:false,messages:[e instanceof Error?e.message:String(e)]};}
 }
+
+/** Local proof is explicitly self-reported; this validates formatting, not execution authenticity. */
+export function gradeLocalEvidence(code:string,observed:string,referenceOutput:string,confirmed:boolean,isShell:boolean):Grade {
+ const messages:string[]=[];
+ if(!confirmed)messages.push('Confirm the example was executed locally before submitting evidence.');
+ if(code.trim().length<25)messages.push('Provide the local source or commands (minimum 25 characters).');
+ if(isShell){if(!/^Python 3\.\d+(?:\.\d+)?\b/.test(observed.trim()))messages.push('For virtual environments, enter the observed Python 3.x version output from the terminal.');}
+ else if(observed.trim()!==referenceOutput.trim())messages.push('Observed output does not match the lesson reference; rerun in Python and inspect differences.');
+ return {pass:messages.length===0,messages:messages.length?messages:['Local run evidence accepted (learner attestation, not verified execution).']};
+}

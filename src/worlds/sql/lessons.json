@@ -1,0 +1,1466 @@
+[
+  {
+    "id": "sql-01",
+    "number": 1,
+    "world": "sql",
+    "title": "SELECT",
+    "minutes": 20,
+    "objectives": [
+      "Define select and identify its input and output.",
+      "Predict how select changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "SELECT",
+        "meaning": "Read selected columns from a table"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Projection keeps named columns instead of every field."
+      }
+    ],
+    "explanation": [
+      "Read selected columns from a table",
+      "Projection keeps named columns instead of every field.",
+      "Worked example: SELECT name, hours FROM sessions;",
+      "Application: Retrieve a learner's study sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → SELECT → observed result and validation",
+    "source": "SELECT name, hours FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Retrieve a learner's study sessions",
+      "Add a select operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes SELECT?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Read selected columns from a table"
+      ],
+      "answer": 3,
+      "explanation": "Read selected columns from a table"
+    },
+    "repair": {
+      "source": "SELECT name, hours FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Projection keeps named columns instead of every field."
+    },
+    "build": "Use select on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused select demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with select; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-02",
+    "number": 2,
+    "world": "sql",
+    "title": "WHERE",
+    "minutes": 20,
+    "objectives": [
+      "Define where and identify its input and output.",
+      "Predict how where changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "WHERE",
+        "meaning": "Filter table rows using a condition"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Selection removes rows that do not satisfy the predicate."
+      }
+    ],
+    "explanation": [
+      "Filter table rows using a condition",
+      "Selection removes rows that do not satisfy the predicate.",
+      "Worked example: SELECT name, hours FROM sessions WHERE hours > 2;",
+      "Application: Find long study sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → WHERE → observed result and validation",
+    "source": "SELECT name, hours FROM sessions WHERE hours > 2;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Find long study sessions",
+      "Add a where operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes WHERE?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Filter table rows using a condition",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Filter table rows using a condition"
+    },
+    "repair": {
+      "source": "SELECT name, hours FROM sessions WHERE hours > 2;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Selection removes rows that do not satisfy the predicate."
+    },
+    "build": "Use where on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused where demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with where; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-03",
+    "number": 3,
+    "world": "sql",
+    "title": "GROUP BY",
+    "minutes": 20,
+    "objectives": [
+      "Define group by and identify its input and output.",
+      "Predict how group by changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "GROUP BY",
+        "meaning": "Combine rows into groups before aggregation"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Each group gets one aggregate row."
+      }
+    ],
+    "explanation": [
+      "Combine rows into groups before aggregation",
+      "Each group gets one aggregate row.",
+      "Worked example: SELECT subject, SUM(hours) FROM sessions GROUP BY subject;",
+      "Application: Total study time per subject. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → GROUP BY → observed result and validation",
+    "source": "SELECT subject, SUM(hours) FROM sessions GROUP BY subject;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Total study time per subject",
+      "Add a group by operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes GROUP BY?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Combine rows into groups before aggregation",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Combine rows into groups before aggregation"
+    },
+    "repair": {
+      "source": "SELECT subject, SUM(hours) FROM sessions GROUP BY subject;",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Each group gets one aggregate row."
+    },
+    "build": "Use group by on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused group by demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with group by; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-04",
+    "number": 4,
+    "world": "sql",
+    "title": "HAVING",
+    "minutes": 20,
+    "objectives": [
+      "Define having and identify its input and output.",
+      "Predict how having changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "HAVING",
+        "meaning": "Filter groups after aggregation"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "HAVING filters aggregated groups; WHERE filters individual rows."
+      }
+    ],
+    "explanation": [
+      "Filter groups after aggregation",
+      "HAVING filters aggregated groups; WHERE filters individual rows.",
+      "Worked example: SELECT subject, SUM(hours) FROM sessions GROUP BY subject HAVING SUM(hours) > 3;",
+      "Application: Find subjects receiving enough attention. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → HAVING → observed result and validation",
+    "source": "SELECT subject, SUM(hours) FROM sessions GROUP BY subject HAVING SUM(hours) > 3;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Find subjects receiving enough attention",
+      "Add a having operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes HAVING?",
+      "options": [
+        "Filter groups after aggregation",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Filter groups after aggregation"
+    },
+    "repair": {
+      "source": "SELECT subject, SUM(hours) FROM sessions GROUP BY subject HAVING SUM(hours) > 3;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "HAVING filters aggregated groups; WHERE filters individual rows."
+    },
+    "build": "Use having on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused having demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with having; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-05",
+    "number": 5,
+    "world": "sql",
+    "title": "ORDER BY",
+    "minutes": 20,
+    "objectives": [
+      "Define order by and identify its input and output.",
+      "Predict how order by changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "ORDER BY",
+        "meaning": "Sort query result rows"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Descending order places higher values before lower ones."
+      }
+    ],
+    "explanation": [
+      "Sort query result rows",
+      "Descending order places higher values before lower ones.",
+      "Worked example: SELECT name, hours FROM sessions ORDER BY hours DESC;",
+      "Application: Show longest sessions first. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → ORDER BY → observed result and validation",
+    "source": "SELECT name, hours FROM sessions ORDER BY hours DESC;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Show longest sessions first",
+      "Add a order by operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes ORDER BY?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Sort query result rows"
+      ],
+      "answer": 3,
+      "explanation": "Sort query result rows"
+    },
+    "repair": {
+      "source": "SELECT name, hours FROM sessions ORDER BY hours DESC;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Descending order places higher values before lower ones."
+    },
+    "build": "Use order by on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused order by demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with order by; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-06",
+    "number": 6,
+    "world": "sql",
+    "title": "LIMIT",
+    "minutes": 20,
+    "objectives": [
+      "Define limit and identify its input and output.",
+      "Predict how limit changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "LIMIT",
+        "meaning": "Restrict returned row count"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Combine LIMIT with ORDER BY to get the top-ranked rows."
+      }
+    ],
+    "explanation": [
+      "Restrict returned row count",
+      "Combine LIMIT with ORDER BY to get the top-ranked rows.",
+      "Worked example: SELECT name FROM sessions ORDER BY hours DESC LIMIT 2;",
+      "Application: List two most intensive sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → LIMIT → observed result and validation",
+    "source": "SELECT name FROM sessions ORDER BY hours DESC LIMIT 2;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "List two most intensive sessions",
+      "Add a limit operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes LIMIT?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Restrict returned row count",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Restrict returned row count"
+    },
+    "repair": {
+      "source": "SELECT name FROM sessions ORDER BY hours DESC LIMIT 2;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Combine LIMIT with ORDER BY to get the top-ranked rows."
+    },
+    "build": "Use limit on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused limit demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with limit; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-07",
+    "number": 7,
+    "world": "sql",
+    "title": "DISTINCT",
+    "minutes": 20,
+    "objectives": [
+      "Define distinct and identify its input and output.",
+      "Predict how distinct changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "DISTINCT",
+        "meaning": "Remove duplicate selected rows"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "DISTINCT applies to the entire selected tuple."
+      }
+    ],
+    "explanation": [
+      "Remove duplicate selected rows",
+      "DISTINCT applies to the entire selected tuple.",
+      "Worked example: SELECT DISTINCT subject FROM sessions;",
+      "Application: List unique subjects. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → DISTINCT → observed result and validation",
+    "source": "SELECT DISTINCT subject FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "List unique subjects",
+      "Add a distinct operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes DISTINCT?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Remove duplicate selected rows",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Remove duplicate selected rows"
+    },
+    "repair": {
+      "source": "SELECT DISTINCT subject FROM sessions;",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "DISTINCT applies to the entire selected tuple."
+    },
+    "build": "Use distinct on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused distinct demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with distinct; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-08",
+    "number": 8,
+    "world": "sql",
+    "title": "JOIN",
+    "minutes": 20,
+    "objectives": [
+      "Define join and identify its input and output.",
+      "Predict how join changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "JOIN",
+        "meaning": "Combine records through related keys"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Joining without a correct key can multiply rows."
+      }
+    ],
+    "explanation": [
+      "Combine records through related keys",
+      "Joining without a correct key can multiply rows.",
+      "Worked example: SELECT s.name, u.name FROM sessions s JOIN users u ON s.user_id = u.id;",
+      "Application: Attach student names to sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → JOIN → observed result and validation",
+    "source": "SELECT s.name, u.name FROM sessions s JOIN users u ON s.user_id = u.id;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Attach student names to sessions",
+      "Add a join operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes JOIN?",
+      "options": [
+        "Combine records through related keys",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Combine records through related keys"
+    },
+    "repair": {
+      "source": "SELECT s.name, u.name FROM sessions s JOIN users u ON s.user_id = u.id;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Joining without a correct key can multiply rows."
+    },
+    "build": "Use join on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused join demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with join; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-09",
+    "number": 9,
+    "world": "sql",
+    "title": "INNER JOIN",
+    "minutes": 20,
+    "objectives": [
+      "Define inner join and identify its input and output.",
+      "Predict how inner join changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "INNER JOIN",
+        "meaning": "Return rows whose keys match in both tables"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Unmatched rows are excluded."
+      }
+    ],
+    "explanation": [
+      "Return rows whose keys match in both tables",
+      "Unmatched rows are excluded.",
+      "Worked example: SELECT s.name, u.name FROM sessions s INNER JOIN users u ON s.user_id=u.id;",
+      "Application: Find owned study sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → INNER JOIN → observed result and validation",
+    "source": "SELECT s.name, u.name FROM sessions s INNER JOIN users u ON s.user_id=u.id;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Find owned study sessions",
+      "Add a inner join operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes INNER JOIN?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Return rows whose keys match in both tables"
+      ],
+      "answer": 3,
+      "explanation": "Return rows whose keys match in both tables"
+    },
+    "repair": {
+      "source": "SELECT s.name, u.name FROM sessions s INNER JOIN users u ON s.user_id=u.id;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Unmatched rows are excluded."
+    },
+    "build": "Use inner join on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused inner join demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with inner join; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-10",
+    "number": 10,
+    "world": "sql",
+    "title": "LEFT JOIN",
+    "minutes": 20,
+    "objectives": [
+      "Define left join and identify its input and output.",
+      "Predict how left join changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "LEFT JOIN",
+        "meaning": "Keep every left row, even without a right match"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Unmatched right-side fields are NULL."
+      }
+    ],
+    "explanation": [
+      "Keep every left row, even without a right match",
+      "Unmatched right-side fields are NULL.",
+      "Worked example: SELECT u.name, s.name FROM users u LEFT JOIN sessions s ON u.id=s.user_id;",
+      "Application: Find students with no sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → LEFT JOIN → observed result and validation",
+    "source": "SELECT u.name, s.name FROM users u LEFT JOIN sessions s ON u.id=s.user_id;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Find students with no sessions",
+      "Add a left join operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes LEFT JOIN?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Keep every left row, even without a right match",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Keep every left row, even without a right match"
+    },
+    "repair": {
+      "source": "SELECT u.name, s.name FROM users u LEFT JOIN sessions s ON u.id=s.user_id;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Unmatched right-side fields are NULL."
+    },
+    "build": "Use left join on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused left join demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with left join; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-11",
+    "number": 11,
+    "world": "sql",
+    "title": "RIGHT JOIN",
+    "minutes": 20,
+    "objectives": [
+      "Define right join and identify its input and output.",
+      "Predict how right join changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "RIGHT JOIN",
+        "meaning": "Keep every right row even without left match"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "In SQLite, RIGHT JOIN needs a sufficiently recent version."
+      }
+    ],
+    "explanation": [
+      "Keep every right row even without left match",
+      "In SQLite, RIGHT JOIN needs a sufficiently recent version.",
+      "Worked example: SELECT u.name, s.name FROM sessions s RIGHT JOIN users u ON s.user_id=u.id;",
+      "Application: Audit all registered users. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → RIGHT JOIN → observed result and validation",
+    "source": "SELECT u.name, s.name FROM sessions s RIGHT JOIN users u ON s.user_id=u.id;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Audit all registered users",
+      "Add a right join operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes RIGHT JOIN?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Keep every right row even without left match",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Keep every right row even without left match"
+    },
+    "repair": {
+      "source": "SELECT u.name, s.name FROM sessions s RIGHT JOIN users u ON s.user_id=u.id;",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "In SQLite, RIGHT JOIN needs a sufficiently recent version."
+    },
+    "build": "Use right join on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused right join demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with right join; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-12",
+    "number": 12,
+    "world": "sql",
+    "title": "FULL JOIN",
+    "minutes": 20,
+    "objectives": [
+      "Define full join and identify its input and output.",
+      "Predict how full join changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "FULL JOIN",
+        "meaning": "Include both matched and unmatched rows"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Some databases need a UNION workaround for full joins."
+      }
+    ],
+    "explanation": [
+      "Include both matched and unmatched rows",
+      "Some databases need a UNION workaround for full joins.",
+      "Worked example: SELECT u.name, s.name FROM users u FULL OUTER JOIN sessions s ON u.id=s.user_id;",
+      "Application: Detect orphaned or unassigned data. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → FULL JOIN → observed result and validation",
+    "source": "SELECT u.name, s.name FROM users u FULL OUTER JOIN sessions s ON u.id=s.user_id;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Detect orphaned or unassigned data",
+      "Add a full join operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes FULL JOIN?",
+      "options": [
+        "Include both matched and unmatched rows",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Include both matched and unmatched rows"
+    },
+    "repair": {
+      "source": "SELECT u.name, s.name FROM users u FULL OUTER JOIN sessions s ON u.id=s.user_id;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Some databases need a UNION workaround for full joins."
+    },
+    "build": "Use full join on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused full join demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with full join; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-13",
+    "number": 13,
+    "world": "sql",
+    "title": "UNION",
+    "minutes": 20,
+    "objectives": [
+      "Define union and identify its input and output.",
+      "Predict how union changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "UNION",
+        "meaning": "Combine compatible result sets and remove duplicate rows"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "UNION ALL preserves duplicates; UNION removes them."
+      }
+    ],
+    "explanation": [
+      "Combine compatible result sets and remove duplicate rows",
+      "UNION ALL preserves duplicates; UNION removes them.",
+      "Worked example: SELECT name FROM users UNION SELECT name FROM sessions;",
+      "Application: Combine names from two reports. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → UNION → observed result and validation",
+    "source": "SELECT name FROM users UNION SELECT name FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Combine names from two reports",
+      "Add a union operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes UNION?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Combine compatible result sets and remove duplicate rows"
+      ],
+      "answer": 3,
+      "explanation": "Combine compatible result sets and remove duplicate rows"
+    },
+    "repair": {
+      "source": "SELECT name FROM users UNION SELECT name FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "UNION ALL preserves duplicates; UNION removes them."
+    },
+    "build": "Use union on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused union demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with union; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-14",
+    "number": 14,
+    "world": "sql",
+    "title": "CASE",
+    "minutes": 20,
+    "objectives": [
+      "Define case and identify its input and output.",
+      "Predict how case changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "CASE",
+        "meaning": "Choose an output based on conditions"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "CASE returns the first matching branch."
+      }
+    ],
+    "explanation": [
+      "Choose an output based on conditions",
+      "CASE returns the first matching branch.",
+      "Worked example: SELECT name, CASE WHEN hours>=3 THEN 'long' ELSE 'short' END AS label FROM sessions;",
+      "Application: Classify study sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → CASE → observed result and validation",
+    "source": "SELECT name, CASE WHEN hours>=3 THEN 'long' ELSE 'short' END AS label FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Classify study sessions",
+      "Add a case operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes CASE?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Choose an output based on conditions",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Choose an output based on conditions"
+    },
+    "repair": {
+      "source": "SELECT name, CASE WHEN hours>=3 THEN 'long' ELSE 'short' END AS label FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "CASE returns the first matching branch."
+    },
+    "build": "Use case on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused case demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with case; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-15",
+    "number": 15,
+    "world": "sql",
+    "title": "COUNT()",
+    "minutes": 20,
+    "objectives": [
+      "Define count() and identify its input and output.",
+      "Predict how count() changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "COUNT()",
+        "meaning": "Count rows or non-null values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "COUNT(*) counts rows; COUNT(column) excludes NULL."
+      }
+    ],
+    "explanation": [
+      "Count rows or non-null values",
+      "COUNT(*) counts rows; COUNT(column) excludes NULL.",
+      "Worked example: SELECT COUNT(*) FROM sessions;",
+      "Application: Count recorded sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → COUNT() → observed result and validation",
+    "source": "SELECT COUNT(*) FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Count recorded sessions",
+      "Add a count() operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes COUNT()?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Count rows or non-null values",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Count rows or non-null values"
+    },
+    "repair": {
+      "source": "SELECT COUNT(*) FROM sessions;",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "COUNT(*) counts rows; COUNT(column) excludes NULL."
+    },
+    "build": "Use count() on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused count() demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with count(); preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-16",
+    "number": 16,
+    "world": "sql",
+    "title": "SUM()",
+    "minutes": 20,
+    "objectives": [
+      "Define sum() and identify its input and output.",
+      "Predict how sum() changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "SUM()",
+        "meaning": "Compute a numeric total"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "SUM ignores NULL values."
+      }
+    ],
+    "explanation": [
+      "Compute a numeric total",
+      "SUM ignores NULL values.",
+      "Worked example: SELECT SUM(hours) FROM sessions;",
+      "Application: Calculate study hours. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → SUM() → observed result and validation",
+    "source": "SELECT SUM(hours) FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Calculate study hours",
+      "Add a sum() operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes SUM()?",
+      "options": [
+        "Compute a numeric total",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Compute a numeric total"
+    },
+    "repair": {
+      "source": "SELECT SUM(hours) FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "SUM ignores NULL values."
+    },
+    "build": "Use sum() on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused sum() demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with sum(); preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-17",
+    "number": 17,
+    "world": "sql",
+    "title": "AVG()",
+    "minutes": 20,
+    "objectives": [
+      "Define avg() and identify its input and output.",
+      "Predict how avg() changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "AVG()",
+        "meaning": "Calculate the arithmetic mean"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Use an explicit grouping when averaging per subject."
+      }
+    ],
+    "explanation": [
+      "Calculate the arithmetic mean",
+      "Use an explicit grouping when averaging per subject.",
+      "Worked example: SELECT AVG(hours) FROM sessions;",
+      "Application: Mean duration of study. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → AVG() → observed result and validation",
+    "source": "SELECT AVG(hours) FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Mean duration of study",
+      "Add a avg() operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes AVG()?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Calculate the arithmetic mean"
+      ],
+      "answer": 3,
+      "explanation": "Calculate the arithmetic mean"
+    },
+    "repair": {
+      "source": "SELECT AVG(hours) FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Use an explicit grouping when averaging per subject."
+    },
+    "build": "Use avg() on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused avg() demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with avg(); preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-18",
+    "number": 18,
+    "world": "sql",
+    "title": "MIN() / MAX()",
+    "minutes": 20,
+    "objectives": [
+      "Define min() / max() and identify its input and output.",
+      "Predict how min() / max() changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "MIN() / MAX()",
+        "meaning": "Find the smallest and largest values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Aggregates return summary values."
+      }
+    ],
+    "explanation": [
+      "Find the smallest and largest values",
+      "Aggregates return summary values.",
+      "Worked example: SELECT MIN(hours), MAX(hours) FROM sessions;",
+      "Application: Identify shortest and longest sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → MIN() / MAX() → observed result and validation",
+    "source": "SELECT MIN(hours), MAX(hours) FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Identify shortest and longest sessions",
+      "Add a min() / max() operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes MIN() / MAX()?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Find the smallest and largest values",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Find the smallest and largest values"
+    },
+    "repair": {
+      "source": "SELECT MIN(hours), MAX(hours) FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Aggregates return summary values."
+    },
+    "build": "Use min() / max() on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused min() / max() demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with min() / max(); preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-19",
+    "number": 19,
+    "world": "sql",
+    "title": "CTE (WITH)",
+    "minutes": 20,
+    "objectives": [
+      "Define cte (with) and identify its input and output.",
+      "Predict how cte (with) changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "CTE (WITH)",
+        "meaning": "Name a temporary query result for one statement"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A CTE makes multistage queries more readable."
+      }
+    ],
+    "explanation": [
+      "Name a temporary query result for one statement",
+      "A CTE makes multistage queries more readable.",
+      "Worked example: WITH totals AS (SELECT subject, SUM(hours) h FROM sessions GROUP BY subject) SELECT * FROM totals;",
+      "Application: Organize complex summaries. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → CTE (WITH) → observed result and validation",
+    "source": "WITH totals AS (SELECT subject, SUM(hours) h FROM sessions GROUP BY subject) SELECT * FROM totals;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Organize complex summaries",
+      "Add a cte (with) operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes CTE (WITH)?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Name a temporary query result for one statement",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Name a temporary query result for one statement"
+    },
+    "repair": {
+      "source": "WITH totals AS (SELECT subject, SUM(hours) h FROM sessions GROUP BY subject) SELECT * FROM totals;",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "A CTE makes multistage queries more readable."
+    },
+    "build": "Use cte (with) on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused cte (with) demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with cte (with); preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-20",
+    "number": 20,
+    "world": "sql",
+    "title": "WINDOW",
+    "minutes": 20,
+    "objectives": [
+      "Define window and identify its input and output.",
+      "Predict how window changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "WINDOW",
+        "meaning": "Calculate across related rows without collapsing them"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Window functions preserve individual records."
+      }
+    ],
+    "explanation": [
+      "Calculate across related rows without collapsing them",
+      "Window functions preserve individual records.",
+      "Worked example: SELECT name, hours, ROW_NUMBER() OVER (ORDER BY hours DESC) AS rank FROM sessions;",
+      "Application: Rank sessions while retaining rows. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → WINDOW → observed result and validation",
+    "source": "SELECT name, hours, ROW_NUMBER() OVER (ORDER BY hours DESC) AS rank FROM sessions;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Rank sessions while retaining rows",
+      "Add a window operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes WINDOW?",
+      "options": [
+        "Calculate across related rows without collapsing them",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Calculate across related rows without collapsing them"
+    },
+    "repair": {
+      "source": "SELECT name, hours, ROW_NUMBER() OVER (ORDER BY hours DESC) AS rank FROM sessions;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Window functions preserve individual records."
+    },
+    "build": "Use window on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused window demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with window; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-21",
+    "number": 21,
+    "world": "sql",
+    "title": "INDEX",
+    "minutes": 20,
+    "objectives": [
+      "Define index and identify its input and output.",
+      "Predict how index changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "INDEX",
+        "meaning": "Build an auxiliary lookup structure"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Indexes have space and write-time costs."
+      }
+    ],
+    "explanation": [
+      "Build an auxiliary lookup structure",
+      "Indexes have space and write-time costs.",
+      "Worked example: CREATE INDEX idx_subject ON sessions(subject);",
+      "Application: Speed searches by subject. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → INDEX → observed result and validation",
+    "source": "CREATE INDEX idx_subject ON sessions(subject);",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Speed searches by subject",
+      "Add a index operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes INDEX?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Build an auxiliary lookup structure"
+      ],
+      "answer": 3,
+      "explanation": "Build an auxiliary lookup structure"
+    },
+    "repair": {
+      "source": "CREATE INDEX idx_subject ON sessions(subject);",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Indexes have space and write-time costs."
+    },
+    "build": "Use index on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused index demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with index; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-22",
+    "number": 22,
+    "world": "sql",
+    "title": "VIEW",
+    "minutes": 20,
+    "objectives": [
+      "Define view and identify its input and output.",
+      "Predict how view changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "VIEW",
+        "meaning": "Save a reusable query definition"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A normal view stores the query, not duplicate table rows."
+      }
+    ],
+    "explanation": [
+      "Save a reusable query definition",
+      "A normal view stores the query, not duplicate table rows.",
+      "Worked example: CREATE VIEW long_sessions AS SELECT * FROM sessions WHERE hours>2;",
+      "Application: Expose a filtered reporting view. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → VIEW → observed result and validation",
+    "source": "CREATE VIEW long_sessions AS SELECT * FROM sessions WHERE hours>2;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Expose a filtered reporting view",
+      "Add a view operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes VIEW?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Save a reusable query definition",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Save a reusable query definition"
+    },
+    "repair": {
+      "source": "CREATE VIEW long_sessions AS SELECT * FROM sessions WHERE hours>2;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "A normal view stores the query, not duplicate table rows."
+    },
+    "build": "Use view on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused view demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with view; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-23",
+    "number": 23,
+    "world": "sql",
+    "title": "SUBQUERY",
+    "minutes": 20,
+    "objectives": [
+      "Define subquery and identify its input and output.",
+      "Predict how subquery changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "SUBQUERY",
+        "meaning": "Nest one query inside another"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The inner query provides a value or relation to the outer query."
+      }
+    ],
+    "explanation": [
+      "Nest one query inside another",
+      "The inner query provides a value or relation to the outer query.",
+      "Worked example: SELECT name FROM sessions WHERE hours > (SELECT AVG(hours) FROM sessions);",
+      "Application: Find above-average sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → SUBQUERY → observed result and validation",
+    "source": "SELECT name FROM sessions WHERE hours > (SELECT AVG(hours) FROM sessions);",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Find above-average sessions",
+      "Add a subquery operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes SUBQUERY?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Nest one query inside another",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Nest one query inside another"
+    },
+    "repair": {
+      "source": "SELECT name FROM sessions WHERE hours > (SELECT AVG(hours) FROM sessions);",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "The inner query provides a value or relation to the outer query."
+    },
+    "build": "Use subquery on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused subquery demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with subquery; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "sql-24",
+    "number": 24,
+    "world": "sql",
+    "title": "TRANSACTION",
+    "minutes": 20,
+    "objectives": [
+      "Define transaction and identify its input and output.",
+      "Predict how transaction changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "TRANSACTION",
+        "meaning": "Group modifications as one atomic unit"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "ROLLBACK cancels uncommitted changes."
+      }
+    ],
+    "explanation": [
+      "Group modifications as one atomic unit",
+      "ROLLBACK cancels uncommitted changes.",
+      "Worked example: BEGIN; UPDATE sessions SET hours=4 WHERE id=1; COMMIT;",
+      "Application: Safely update records. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → TRANSACTION → observed result and validation",
+    "source": "BEGIN; UPDATE sessions SET hours=4 WHERE id=1; COMMIT;",
+    "expected": "Inspect the returned table, including row count and column names.",
+    "applications": [
+      "Safely update records",
+      "Add a transaction operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes TRANSACTION?",
+      "options": [
+        "Group modifications as one atomic unit",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Group modifications as one atomic unit"
+    },
+    "repair": {
+      "source": "BEGIN; UPDATE sessions SET hours=4 WHERE id=1; COMMIT;",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "ROLLBACK cancels uncommitted changes."
+    },
+    "build": "Use transaction on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused transaction demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with transaction; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  }
+]

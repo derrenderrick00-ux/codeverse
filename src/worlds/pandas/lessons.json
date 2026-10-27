@@ -1,0 +1,1527 @@
+[
+  {
+    "id": "pd-01",
+    "number": 1,
+    "world": "pandas",
+    "title": "Read Data",
+    "minutes": 20,
+    "objectives": [
+      "Define read data and identify its input and output.",
+      "Predict how read data changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Read Data",
+        "meaning": "Load CSV records into a DataFrame"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "File encoding and missing values may affect import."
+      }
+    ],
+    "explanation": [
+      "Load CSV records into a DataFrame",
+      "File encoding and missing values may affect import.",
+      "Worked example: df = pd.read_csv('sessions.csv')",
+      "Application: Import learning logs. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Read Data → observed result and validation",
+    "source": "df = pd.read_csv('sessions.csv')",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Import learning logs",
+      "Add a read data operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Read Data?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Load CSV records into a DataFrame"
+      ],
+      "answer": 3,
+      "explanation": "Load CSV records into a DataFrame"
+    },
+    "repair": {
+      "source": "df = pd.read_csv('sessions.csv')",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "File encoding and missing values may affect import."
+    },
+    "build": "Use read data on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused read data demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with read data; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-02",
+    "number": 2,
+    "world": "pandas",
+    "title": "View Data",
+    "minutes": 20,
+    "objectives": [
+      "Define view data and identify its input and output.",
+      "Predict how view data changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "View Data",
+        "meaning": "Inspect the first few rows"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "head() defaults to five rows."
+      }
+    ],
+    "explanation": [
+      "Inspect the first few rows",
+      "head() defaults to five rows.",
+      "Worked example: df.head()",
+      "Application: Preview recently imported records. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → View Data → observed result and validation",
+    "source": "df.head()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Preview recently imported records",
+      "Add a view data operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes View Data?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Inspect the first few rows",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Inspect the first few rows"
+    },
+    "repair": {
+      "source": "df.head()",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "head() defaults to five rows."
+    },
+    "build": "Use view data on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused view data demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with view data; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-03",
+    "number": 3,
+    "world": "pandas",
+    "title": "Info",
+    "minutes": 20,
+    "objectives": [
+      "Define info and identify its input and output.",
+      "Predict how info changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Info",
+        "meaning": "Inspect column types and null counts"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "info() shows non-null counts and types."
+      }
+    ],
+    "explanation": [
+      "Inspect column types and null counts",
+      "info() shows non-null counts and types.",
+      "Worked example: df.info()",
+      "Application: Check imported data quality. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Info → observed result and validation",
+    "source": "df.info()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Check imported data quality",
+      "Add a info operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Info?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Inspect column types and null counts",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Inspect column types and null counts"
+    },
+    "repair": {
+      "source": "df.info()",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "info() shows non-null counts and types."
+    },
+    "build": "Use info on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused info demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with info; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-04",
+    "number": 4,
+    "world": "pandas",
+    "title": "Summary",
+    "minutes": 20,
+    "objectives": [
+      "Define summary and identify its input and output.",
+      "Predict how summary changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Summary",
+        "meaning": "Calculate descriptive statistics"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "describe() defaults to numeric columns."
+      }
+    ],
+    "explanation": [
+      "Calculate descriptive statistics",
+      "describe() defaults to numeric columns.",
+      "Worked example: df.describe()",
+      "Application: Summarize completion rates. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Summary → observed result and validation",
+    "source": "df.describe()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Summarize completion rates",
+      "Add a summary operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Summary?",
+      "options": [
+        "Calculate descriptive statistics",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Calculate descriptive statistics"
+    },
+    "repair": {
+      "source": "df.describe()",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "describe() defaults to numeric columns."
+    },
+    "build": "Use summary on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused summary demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with summary; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-05",
+    "number": 5,
+    "world": "pandas",
+    "title": "Shape",
+    "minutes": 20,
+    "objectives": [
+      "Define shape and identify its input and output.",
+      "Predict how shape changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Shape",
+        "meaning": "Get row and column counts"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The first dimension counts rows."
+      }
+    ],
+    "explanation": [
+      "Get row and column counts",
+      "The first dimension counts rows.",
+      "Worked example: df.shape",
+      "Application: Inspect dataset dimensions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Shape → observed result and validation",
+    "source": "df.shape",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Inspect dataset dimensions",
+      "Add a shape operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Shape?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Get row and column counts"
+      ],
+      "answer": 3,
+      "explanation": "Get row and column counts"
+    },
+    "repair": {
+      "source": "df.shape",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "The first dimension counts rows."
+    },
+    "build": "Use shape on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused shape demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with shape; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-06",
+    "number": 6,
+    "world": "pandas",
+    "title": "Columns",
+    "minutes": 20,
+    "objectives": [
+      "Define columns and identify its input and output.",
+      "Predict how columns changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Columns",
+        "meaning": "Read column labels"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Column names must match when selecting."
+      }
+    ],
+    "explanation": [
+      "Read column labels",
+      "Column names must match when selecting.",
+      "Worked example: df.columns",
+      "Application: Confirm schema after import. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Columns → observed result and validation",
+    "source": "df.columns",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Confirm schema after import",
+      "Add a columns operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Columns?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Read column labels",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Read column labels"
+    },
+    "repair": {
+      "source": "df.columns",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Column names must match when selecting."
+    },
+    "build": "Use columns on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused columns demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with columns; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-07",
+    "number": 7,
+    "world": "pandas",
+    "title": "Data Types",
+    "minutes": 20,
+    "objectives": [
+      "Define data types and identify its input and output.",
+      "Predict how data types changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Data Types",
+        "meaning": "Inspect per-column dtypes"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Pandas nullable types differ from base Python types."
+      }
+    ],
+    "explanation": [
+      "Inspect per-column dtypes",
+      "Pandas nullable types differ from base Python types.",
+      "Worked example: df.dtypes",
+      "Application: Identify numbers imported as strings. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Data Types → observed result and validation",
+    "source": "df.dtypes",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Identify numbers imported as strings",
+      "Add a data types operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Data Types?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Inspect per-column dtypes",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Inspect per-column dtypes"
+    },
+    "repair": {
+      "source": "df.dtypes",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Pandas nullable types differ from base Python types."
+    },
+    "build": "Use data types on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused data types demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with data types; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-08",
+    "number": 8,
+    "world": "pandas",
+    "title": "Select Column",
+    "minutes": 20,
+    "objectives": [
+      "Define select column and identify its input and output.",
+      "Predict how select column changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Select Column",
+        "meaning": "Extract one named Series"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Single brackets normally return a Series."
+      }
+    ],
+    "explanation": [
+      "Extract one named Series",
+      "Single brackets normally return a Series.",
+      "Worked example: df['hours']",
+      "Application: Analyze study durations. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Select Column → observed result and validation",
+    "source": "df['hours']",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Analyze study durations",
+      "Add a select column operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Select Column?",
+      "options": [
+        "Extract one named Series",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Extract one named Series"
+    },
+    "repair": {
+      "source": "df['hours']",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Single brackets normally return a Series."
+    },
+    "build": "Use select column on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused select column demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with select column; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-09",
+    "number": 9,
+    "world": "pandas",
+    "title": "Select Multiple",
+    "minutes": 20,
+    "objectives": [
+      "Define select multiple and identify its input and output.",
+      "Predict how select multiple changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Select Multiple",
+        "meaning": "Extract several columns"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Double brackets return a DataFrame."
+      }
+    ],
+    "explanation": [
+      "Extract several columns",
+      "Double brackets return a DataFrame.",
+      "Worked example: df[['name', 'hours']]",
+      "Application: Prepare a slim report. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Select Multiple → observed result and validation",
+    "source": "df[['name', 'hours']]",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Prepare a slim report",
+      "Add a select multiple operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Select Multiple?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Extract several columns"
+      ],
+      "answer": 3,
+      "explanation": "Extract several columns"
+    },
+    "repair": {
+      "source": "df[['name', 'hours']]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Double brackets return a DataFrame."
+    },
+    "build": "Use select multiple on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused select multiple demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with select multiple; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-10",
+    "number": 10,
+    "world": "pandas",
+    "title": "Filter Rows",
+    "minutes": 20,
+    "objectives": [
+      "Define filter rows and identify its input and output.",
+      "Predict how filter rows changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Filter Rows",
+        "meaning": "Keep rows meeting a condition"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A Boolean mask is evaluated for each row."
+      }
+    ],
+    "explanation": [
+      "Keep rows meeting a condition",
+      "A Boolean mask is evaluated for each row.",
+      "Worked example: df[df['hours'] > 2]",
+      "Application: Find longer sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Filter Rows → observed result and validation",
+    "source": "df[df['hours'] > 2]",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Find longer sessions",
+      "Add a filter rows operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Filter Rows?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Keep rows meeting a condition",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Keep rows meeting a condition"
+    },
+    "repair": {
+      "source": "df[df['hours'] > 2]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "A Boolean mask is evaluated for each row."
+    },
+    "build": "Use filter rows on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused filter rows demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with filter rows; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-11",
+    "number": 11,
+    "world": "pandas",
+    "title": "Sort Values",
+    "minutes": 20,
+    "objectives": [
+      "Define sort values and identify its input and output.",
+      "Predict how sort values changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Sort Values",
+        "meaning": "Order rows by column"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Sorting returns a new DataFrame unless assigned."
+      }
+    ],
+    "explanation": [
+      "Order rows by column",
+      "Sorting returns a new DataFrame unless assigned.",
+      "Worked example: df.sort_values('hours', ascending=False)",
+      "Application: Rank sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Sort Values → observed result and validation",
+    "source": "df.sort_values('hours', ascending=False)",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Rank sessions",
+      "Add a sort values operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Sort Values?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Order rows by column",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Order rows by column"
+    },
+    "repair": {
+      "source": "df.sort_values('hours', ascending=False)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Sorting returns a new DataFrame unless assigned."
+    },
+    "build": "Use sort values on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused sort values demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with sort values; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-12",
+    "number": 12,
+    "world": "pandas",
+    "title": "Group By",
+    "minutes": 20,
+    "objectives": [
+      "Define group by and identify its input and output.",
+      "Predict how group by changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Group By",
+        "meaning": "Partition records by categorical values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Grouping alone does not aggregate until a reduction is used."
+      }
+    ],
+    "explanation": [
+      "Partition records by categorical values",
+      "Grouping alone does not aggregate until a reduction is used.",
+      "Worked example: df.groupby('subject')['hours'].sum()",
+      "Application: Report hours by subject. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Group By → observed result and validation",
+    "source": "df.groupby('subject')['hours'].sum()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Report hours by subject",
+      "Add a group by operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Group By?",
+      "options": [
+        "Partition records by categorical values",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Partition records by categorical values"
+    },
+    "repair": {
+      "source": "df.groupby('subject')['hours'].sum()",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Grouping alone does not aggregate until a reduction is used."
+    },
+    "build": "Use group by on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused group by demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with group by; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-13",
+    "number": 13,
+    "world": "pandas",
+    "title": "Aggregation",
+    "minutes": 20,
+    "objectives": [
+      "Define aggregation and identify its input and output.",
+      "Predict how aggregation changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Aggregation",
+        "meaning": "Compute several statistics per group"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Aggregation reduces rows into summary values."
+      }
+    ],
+    "explanation": [
+      "Compute several statistics per group",
+      "Aggregation reduces rows into summary values.",
+      "Worked example: df.groupby('subject')['hours'].agg(['sum','mean'])",
+      "Application: Compare total and average effort. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Aggregation → observed result and validation",
+    "source": "df.groupby('subject')['hours'].agg(['sum','mean'])",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Compare total and average effort",
+      "Add a aggregation operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Aggregation?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Compute several statistics per group"
+      ],
+      "answer": 3,
+      "explanation": "Compute several statistics per group"
+    },
+    "repair": {
+      "source": "df.groupby('subject')['hours'].agg(['sum','mean'])",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Aggregation reduces rows into summary values."
+    },
+    "build": "Use aggregation on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused aggregation demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with aggregation; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-14",
+    "number": 14,
+    "world": "pandas",
+    "title": "Merge",
+    "minutes": 20,
+    "objectives": [
+      "Define merge and identify its input and output.",
+      "Predict how merge changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Merge",
+        "meaning": "Join records from different DataFrames"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Duplicate keys can produce multiple rows."
+      }
+    ],
+    "explanation": [
+      "Join records from different DataFrames",
+      "Duplicate keys can produce multiple rows.",
+      "Worked example: pd.merge(sessions, students, on='student_id', how='inner')",
+      "Application: Combine student details with logs. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Merge → observed result and validation",
+    "source": "pd.merge(sessions, students, on='student_id', how='inner')",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Combine student details with logs",
+      "Add a merge operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Merge?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Join records from different DataFrames",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Join records from different DataFrames"
+    },
+    "repair": {
+      "source": "pd.merge(sessions, students, on='student_id', how='inner')",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Duplicate keys can produce multiple rows."
+    },
+    "build": "Use merge on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused merge demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with merge; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-15",
+    "number": 15,
+    "world": "pandas",
+    "title": "Concat",
+    "minutes": 20,
+    "objectives": [
+      "Define concat and identify its input and output.",
+      "Predict how concat changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Concat",
+        "meaning": "Append compatible DataFrames"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Concatenation does not join on a key."
+      }
+    ],
+    "explanation": [
+      "Append compatible DataFrames",
+      "Concatenation does not join on a key.",
+      "Worked example: pd.concat([january, february], ignore_index=True)",
+      "Application: Combine monthly logs. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Concat → observed result and validation",
+    "source": "pd.concat([january, february], ignore_index=True)",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Combine monthly logs",
+      "Add a concat operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Concat?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Append compatible DataFrames",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Append compatible DataFrames"
+    },
+    "repair": {
+      "source": "pd.concat([january, february], ignore_index=True)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Concatenation does not join on a key."
+    },
+    "build": "Use concat on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused concat demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with concat; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-16",
+    "number": 16,
+    "world": "pandas",
+    "title": "Drop",
+    "minutes": 20,
+    "objectives": [
+      "Define drop and identify its input and output.",
+      "Predict how drop changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Drop",
+        "meaning": "Remove selected columns or records"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "drop() does not mutate the original by default."
+      }
+    ],
+    "explanation": [
+      "Remove selected columns or records",
+      "drop() does not mutate the original by default.",
+      "Worked example: df.drop(columns=['obsolete'])",
+      "Application: Remove unused fields. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Drop → observed result and validation",
+    "source": "df.drop(columns=['obsolete'])",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Remove unused fields",
+      "Add a drop operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Drop?",
+      "options": [
+        "Remove selected columns or records",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Remove selected columns or records"
+    },
+    "repair": {
+      "source": "df.drop(columns=['obsolete'])",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "drop() does not mutate the original by default."
+    },
+    "build": "Use drop on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused drop demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with drop; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-17",
+    "number": 17,
+    "world": "pandas",
+    "title": "Rename",
+    "minutes": 20,
+    "objectives": [
+      "Define rename and identify its input and output.",
+      "Predict how rename changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Rename",
+        "meaning": "Change column labels"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Renaming does not change stored data values."
+      }
+    ],
+    "explanation": [
+      "Change column labels",
+      "Renaming does not change stored data values.",
+      "Worked example: df.rename(columns={'hrs':'hours'})",
+      "Application: Standardize incoming CSV schema. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Rename → observed result and validation",
+    "source": "df.rename(columns={'hrs':'hours'})",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Standardize incoming CSV schema",
+      "Add a rename operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Rename?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Change column labels"
+      ],
+      "answer": 3,
+      "explanation": "Change column labels"
+    },
+    "repair": {
+      "source": "df.rename(columns={'hrs':'hours'})",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Renaming does not change stored data values."
+    },
+    "build": "Use rename on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused rename demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with rename; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-18",
+    "number": 18,
+    "world": "pandas",
+    "title": "Handle Missing",
+    "minutes": 20,
+    "objectives": [
+      "Define handle missing and identify its input and output.",
+      "Predict how handle missing changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Handle Missing",
+        "meaning": "Fill or remove missing cells"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Imputation decisions can bias subsequent models."
+      }
+    ],
+    "explanation": [
+      "Fill or remove missing cells",
+      "Imputation decisions can bias subsequent models.",
+      "Worked example: df['hours'].fillna(df['hours'].median())",
+      "Application: Repair incomplete study logs. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Handle Missing → observed result and validation",
+    "source": "df['hours'].fillna(df['hours'].median())",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Repair incomplete study logs",
+      "Add a handle missing operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Handle Missing?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Fill or remove missing cells",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Fill or remove missing cells"
+    },
+    "repair": {
+      "source": "df['hours'].fillna(df['hours'].median())",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Imputation decisions can bias subsequent models."
+    },
+    "build": "Use handle missing on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused handle missing demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with handle missing; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-19",
+    "number": 19,
+    "world": "pandas",
+    "title": "Apply Function",
+    "minutes": 20,
+    "objectives": [
+      "Define apply function and identify its input and output.",
+      "Predict how apply function changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Apply Function",
+        "meaning": "Apply a function to series values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Prefer vectorized operations where available."
+      }
+    ],
+    "explanation": [
+      "Apply a function to series values",
+      "Prefer vectorized operations where available.",
+      "Worked example: df['hours'].apply(lambda x: x*60)",
+      "Application: Convert study hours to minutes. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Apply Function → observed result and validation",
+    "source": "df['hours'].apply(lambda x: x*60)",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Convert study hours to minutes",
+      "Add a apply function operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Apply Function?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Apply a function to series values",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Apply a function to series values"
+    },
+    "repair": {
+      "source": "df['hours'].apply(lambda x: x*60)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Prefer vectorized operations where available."
+    },
+    "build": "Use apply function on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused apply function demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with apply function; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-20",
+    "number": 20,
+    "world": "pandas",
+    "title": "Value Counts",
+    "minutes": 20,
+    "objectives": [
+      "Define value counts and identify its input and output.",
+      "Predict how value counts changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Value Counts",
+        "meaning": "Count occurrences of each category"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Missing values are omitted by default."
+      }
+    ],
+    "explanation": [
+      "Count occurrences of each category",
+      "Missing values are omitted by default.",
+      "Worked example: df['subject'].value_counts()",
+      "Application: Find the most common subject. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Value Counts → observed result and validation",
+    "source": "df['subject'].value_counts()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Find the most common subject",
+      "Add a value counts operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Value Counts?",
+      "options": [
+        "Count occurrences of each category",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Count occurrences of each category"
+    },
+    "repair": {
+      "source": "df['subject'].value_counts()",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Missing values are omitted by default."
+    },
+    "build": "Use value counts on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused value counts demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with value counts; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-21",
+    "number": 21,
+    "world": "pandas",
+    "title": "Pivot Table",
+    "minutes": 20,
+    "objectives": [
+      "Define pivot table and identify its input and output.",
+      "Predict how pivot table changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Pivot Table",
+        "meaning": "Summarize values across two dimensions"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Pivot tables aggregate repeated combinations."
+      }
+    ],
+    "explanation": [
+      "Summarize values across two dimensions",
+      "Pivot tables aggregate repeated combinations.",
+      "Worked example: df.pivot_table(values='hours',index='student',columns='subject',aggfunc='sum')",
+      "Application: Compare students across subjects. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Pivot Table → observed result and validation",
+    "source": "df.pivot_table(values='hours',index='student',columns='subject',aggfunc='sum')",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Compare students across subjects",
+      "Add a pivot table operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Pivot Table?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Summarize values across two dimensions"
+      ],
+      "answer": 3,
+      "explanation": "Summarize values across two dimensions"
+    },
+    "repair": {
+      "source": "df.pivot_table(values='hours',index='student',columns='subject',aggfunc='sum')",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Pivot tables aggregate repeated combinations."
+    },
+    "build": "Use pivot table on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused pivot table demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with pivot table; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-22",
+    "number": 22,
+    "world": "pandas",
+    "title": "Date/Time",
+    "minutes": 20,
+    "objectives": [
+      "Define date/time and identify its input and output.",
+      "Predict how date/time changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Date/Time",
+        "meaning": "Convert text to datetime"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Invalid date formats need explicit handling."
+      }
+    ],
+    "explanation": [
+      "Convert text to datetime",
+      "Invalid date formats need explicit handling.",
+      "Worked example: pd.to_datetime(df['date'])",
+      "Application: Create weekly reports. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Date/Time → observed result and validation",
+    "source": "pd.to_datetime(df['date'])",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Create weekly reports",
+      "Add a date/time operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Date/Time?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Convert text to datetime",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Convert text to datetime"
+    },
+    "repair": {
+      "source": "pd.to_datetime(df['date'])",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Invalid date formats need explicit handling."
+    },
+    "build": "Use date/time on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused date/time demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with date/time; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-23",
+    "number": 23,
+    "world": "pandas",
+    "title": "String Methods",
+    "minutes": 20,
+    "objectives": [
+      "Define string methods and identify its input and output.",
+      "Predict how string methods changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "String Methods",
+        "meaning": "Process text within a Series"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The .str accessor operates elementwise."
+      }
+    ],
+    "explanation": [
+      "Process text within a Series",
+      "The .str accessor operates elementwise.",
+      "Worked example: df['subject'].str.lower()",
+      "Application: Standardize subject spellings. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → String Methods → observed result and validation",
+    "source": "df['subject'].str.lower()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Standardize subject spellings",
+      "Add a string methods operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes String Methods?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Process text within a Series",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Process text within a Series"
+    },
+    "repair": {
+      "source": "df['subject'].str.lower()",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "The .str accessor operates elementwise."
+    },
+    "build": "Use string methods on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused string methods demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with string methods; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-24",
+    "number": 24,
+    "world": "pandas",
+    "title": "Unique Values",
+    "minutes": 20,
+    "objectives": [
+      "Define unique values and identify its input and output.",
+      "Predict how unique values changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Unique Values",
+        "meaning": "List distinct values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "unique() returns encountered categories in order."
+      }
+    ],
+    "explanation": [
+      "List distinct values",
+      "unique() returns encountered categories in order.",
+      "Worked example: df['subject'].unique()",
+      "Application: Inspect subject categories. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Unique Values → observed result and validation",
+    "source": "df['subject'].unique()",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Inspect subject categories",
+      "Add a unique values operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Unique Values?",
+      "options": [
+        "List distinct values",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "List distinct values"
+    },
+    "repair": {
+      "source": "df['subject'].unique()",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "unique() returns encountered categories in order."
+    },
+    "build": "Use unique values on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused unique values demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with unique values; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "pd-25",
+    "number": 25,
+    "world": "pandas",
+    "title": "Boolean Masking",
+    "minutes": 20,
+    "objectives": [
+      "Define boolean masking and identify its input and output.",
+      "Predict how boolean masking changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Boolean Masking",
+        "meaning": "Combine conditions for filtering"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Use parentheses around each condition with & or OR."
+      }
+    ],
+    "explanation": [
+      "Combine conditions for filtering",
+      "Use parentheses around each condition with & or OR.",
+      "Worked example: df[(df['hours']>2) & (df['score']>=70)]",
+      "Application: Find long high-scoring sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Boolean Masking → observed result and validation",
+    "source": "df[(df['hours']>2) & (df['score']>=70)]",
+    "expected": "Inspect the transformed DataFrame or Series.",
+    "applications": [
+      "Find long high-scoring sessions",
+      "Add a boolean masking operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Boolean Masking?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Combine conditions for filtering"
+      ],
+      "answer": 3,
+      "explanation": "Combine conditions for filtering"
+    },
+    "repair": {
+      "source": "df[(df['hours']>2) & (df['score']>=70)]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Use parentheses around each condition with & or OR."
+    },
+    "build": "Use boolean masking on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused boolean masking demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with boolean masking; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  }
+]

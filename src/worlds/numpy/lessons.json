@@ -1,0 +1,1466 @@
+[
+  {
+    "id": "np-01",
+    "number": 1,
+    "world": "numpy",
+    "title": "Array",
+    "minutes": 20,
+    "objectives": [
+      "Define array and identify its input and output.",
+      "Predict how array changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Array",
+        "meaning": "Create a typed n-dimensional array"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Arrays normally hold a uniform dtype."
+      }
+    ],
+    "explanation": [
+      "Create a typed n-dimensional array",
+      "Arrays normally hold a uniform dtype.",
+      "Worked example: np.array([1, 2, 3])",
+      "Application: Store numerical study data. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Array → observed result and validation",
+    "source": "np.array([1, 2, 3])",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Store numerical study data",
+      "Add a array operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Array?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Create a typed n-dimensional array"
+      ],
+      "answer": 3,
+      "explanation": "Create a typed n-dimensional array"
+    },
+    "repair": {
+      "source": "np.array([1, 2, 3])",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Arrays normally hold a uniform dtype."
+    },
+    "build": "Use array on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused array demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with array; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-02",
+    "number": 2,
+    "world": "numpy",
+    "title": "Zeros",
+    "minutes": 20,
+    "objectives": [
+      "Define zeros and identify its input and output.",
+      "Predict how zeros changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Zeros",
+        "meaning": "Create an array filled with zero"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The tuple specifies rows and columns."
+      }
+    ],
+    "explanation": [
+      "Create an array filled with zero",
+      "The tuple specifies rows and columns.",
+      "Worked example: np.zeros((2, 3))",
+      "Application: Initialize numeric buffers. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Zeros → observed result and validation",
+    "source": "np.zeros((2, 3))",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Initialize numeric buffers",
+      "Add a zeros operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Zeros?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Create an array filled with zero",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Create an array filled with zero"
+    },
+    "repair": {
+      "source": "np.zeros((2, 3))",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "The tuple specifies rows and columns."
+    },
+    "build": "Use zeros on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused zeros demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with zeros; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-03",
+    "number": 3,
+    "world": "numpy",
+    "title": "Ones",
+    "minutes": 20,
+    "objectives": [
+      "Define ones and identify its input and output.",
+      "Predict how ones changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Ones",
+        "meaning": "Create a constant-one array"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "dtype can be specified explicitly."
+      }
+    ],
+    "explanation": [
+      "Create a constant-one array",
+      "dtype can be specified explicitly.",
+      "Worked example: np.ones((2, 3))",
+      "Application: Create a baseline mask. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Ones → observed result and validation",
+    "source": "np.ones((2, 3))",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Create a baseline mask",
+      "Add a ones operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Ones?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Create a constant-one array",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Create a constant-one array"
+    },
+    "repair": {
+      "source": "np.ones((2, 3))",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "dtype can be specified explicitly."
+    },
+    "build": "Use ones on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused ones demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with ones; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-04",
+    "number": 4,
+    "world": "numpy",
+    "title": "Arange",
+    "minutes": 20,
+    "objectives": [
+      "Define arange and identify its input and output.",
+      "Predict how arange changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Arange",
+        "meaning": "Generate a half-open numeric sequence"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The stop value is excluded."
+      }
+    ],
+    "explanation": [
+      "Generate a half-open numeric sequence",
+      "The stop value is excluded.",
+      "Worked example: np.arange(0, 10, 2)",
+      "Application: Generate regular time ticks. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Arange → observed result and validation",
+    "source": "np.arange(0, 10, 2)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Generate regular time ticks",
+      "Add a arange operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Arange?",
+      "options": [
+        "Generate a half-open numeric sequence",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Generate a half-open numeric sequence"
+    },
+    "repair": {
+      "source": "np.arange(0, 10, 2)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "The stop value is excluded."
+    },
+    "build": "Use arange on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused arange demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with arange; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-05",
+    "number": 5,
+    "world": "numpy",
+    "title": "Linspace",
+    "minutes": 20,
+    "objectives": [
+      "Define linspace and identify its input and output.",
+      "Predict how linspace changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Linspace",
+        "meaning": "Generate evenly spaced values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The endpoint is included by default."
+      }
+    ],
+    "explanation": [
+      "Generate evenly spaced values",
+      "The endpoint is included by default.",
+      "Worked example: np.linspace(0, 1, 5)",
+      "Application: Sample a smooth parameter range. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Linspace → observed result and validation",
+    "source": "np.linspace(0, 1, 5)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Sample a smooth parameter range",
+      "Add a linspace operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Linspace?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Generate evenly spaced values"
+      ],
+      "answer": 3,
+      "explanation": "Generate evenly spaced values"
+    },
+    "repair": {
+      "source": "np.linspace(0, 1, 5)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "The endpoint is included by default."
+    },
+    "build": "Use linspace on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused linspace demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with linspace; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-06",
+    "number": 6,
+    "world": "numpy",
+    "title": "Random",
+    "minutes": 20,
+    "objectives": [
+      "Define random and identify its input and output.",
+      "Predict how random changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Random",
+        "meaning": "Generate sampled numbers"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A seed improves reproducibility."
+      }
+    ],
+    "explanation": [
+      "Generate sampled numbers",
+      "A seed improves reproducibility.",
+      "Worked example: np.random.default_rng(42).random((2, 3))",
+      "Application: Build synthetic experimental data. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Random → observed result and validation",
+    "source": "np.random.default_rng(42).random((2, 3))",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Build synthetic experimental data",
+      "Add a random operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Random?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Generate sampled numbers",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Generate sampled numbers"
+    },
+    "repair": {
+      "source": "np.random.default_rng(42).random((2, 3))",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "A seed improves reproducibility."
+    },
+    "build": "Use random on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused random demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with random; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-07",
+    "number": 7,
+    "world": "numpy",
+    "title": "Shape",
+    "minutes": 20,
+    "objectives": [
+      "Define shape and identify its input and output.",
+      "Predict how shape changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Shape",
+        "meaning": "Read the size of each axis"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Shape describes each dimension, not total count alone."
+      }
+    ],
+    "explanation": [
+      "Read the size of each axis",
+      "Shape describes each dimension, not total count alone.",
+      "Worked example: arr.shape",
+      "Application: Inspect a batch of features. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Shape → observed result and validation",
+    "source": "arr.shape",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Inspect a batch of features",
+      "Add a shape operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Shape?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Read the size of each axis",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Read the size of each axis"
+    },
+    "repair": {
+      "source": "arr.shape",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Shape describes each dimension, not total count alone."
+    },
+    "build": "Use shape on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused shape demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with shape; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-08",
+    "number": 8,
+    "world": "numpy",
+    "title": "Reshape",
+    "minutes": 20,
+    "objectives": [
+      "Define reshape and identify its input and output.",
+      "Predict how reshape changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Reshape",
+        "meaning": "Reinterpret elements with a new compatible shape"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The element count must remain the same."
+      }
+    ],
+    "explanation": [
+      "Reinterpret elements with a new compatible shape",
+      "The element count must remain the same.",
+      "Worked example: arr.reshape(3, 2)",
+      "Application: Convert a flat log into a matrix. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Reshape → observed result and validation",
+    "source": "arr.reshape(3, 2)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Convert a flat log into a matrix",
+      "Add a reshape operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Reshape?",
+      "options": [
+        "Reinterpret elements with a new compatible shape",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Reinterpret elements with a new compatible shape"
+    },
+    "repair": {
+      "source": "arr.reshape(3, 2)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "The element count must remain the same."
+    },
+    "build": "Use reshape on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused reshape demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with reshape; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-09",
+    "number": 9,
+    "world": "numpy",
+    "title": "Dimension",
+    "minutes": 20,
+    "objectives": [
+      "Define dimension and identify its input and output.",
+      "Predict how dimension changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Dimension",
+        "meaning": "Read number of axes"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A vector typically has ndim=1."
+      }
+    ],
+    "explanation": [
+      "Read number of axes",
+      "A vector typically has ndim=1.",
+      "Worked example: arr.ndim",
+      "Application: Distinguish vectors from matrices. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Dimension → observed result and validation",
+    "source": "arr.ndim",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Distinguish vectors from matrices",
+      "Add a dimension operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Dimension?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Read number of axes"
+      ],
+      "answer": 3,
+      "explanation": "Read number of axes"
+    },
+    "repair": {
+      "source": "arr.ndim",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "A vector typically has ndim=1."
+    },
+    "build": "Use dimension on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused dimension demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with dimension; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-10",
+    "number": 10,
+    "world": "numpy",
+    "title": "Data type",
+    "minutes": 20,
+    "objectives": [
+      "Define data type and identify its input and output.",
+      "Predict how data type changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Data type",
+        "meaning": "Inspect element storage type"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Changing dtype may affect memory and rounding."
+      }
+    ],
+    "explanation": [
+      "Inspect element storage type",
+      "Changing dtype may affect memory and rounding.",
+      "Worked example: arr.dtype",
+      "Application: Ensure numeric calculations use appropriate precision. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Data type → observed result and validation",
+    "source": "arr.dtype",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Ensure numeric calculations use appropriate precision",
+      "Add a data type operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Data type?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Inspect element storage type",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Inspect element storage type"
+    },
+    "repair": {
+      "source": "arr.dtype",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Changing dtype may affect memory and rounding."
+    },
+    "build": "Use data type on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused data type demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with data type; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-11",
+    "number": 11,
+    "world": "numpy",
+    "title": "Indexing",
+    "minutes": 20,
+    "objectives": [
+      "Define indexing and identify its input and output.",
+      "Predict how indexing changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Indexing",
+        "meaning": "Access a specific element by position"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Indexes start at zero."
+      }
+    ],
+    "explanation": [
+      "Access a specific element by position",
+      "Indexes start at zero.",
+      "Worked example: arr[0, 1]",
+      "Application: Read one feature at a given row and column. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Indexing → observed result and validation",
+    "source": "arr[0, 1]",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Read one feature at a given row and column",
+      "Add a indexing operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Indexing?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Access a specific element by position",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Access a specific element by position"
+    },
+    "repair": {
+      "source": "arr[0, 1]",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Indexes start at zero."
+    },
+    "build": "Use indexing on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused indexing demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with indexing; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-12",
+    "number": 12,
+    "world": "numpy",
+    "title": "Slicing",
+    "minutes": 20,
+    "objectives": [
+      "Define slicing and identify its input and output.",
+      "Predict how slicing changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Slicing",
+        "meaning": "Extract a region of an array"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Slices usually exclude the stop position."
+      }
+    ],
+    "explanation": [
+      "Extract a region of an array",
+      "Slices usually exclude the stop position.",
+      "Worked example: arr[1:4]",
+      "Application: Select a time interval. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Slicing → observed result and validation",
+    "source": "arr[1:4]",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Select a time interval",
+      "Add a slicing operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Slicing?",
+      "options": [
+        "Extract a region of an array",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Extract a region of an array"
+    },
+    "repair": {
+      "source": "arr[1:4]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Slices usually exclude the stop position."
+    },
+    "build": "Use slicing on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused slicing demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with slicing; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-13",
+    "number": 13,
+    "world": "numpy",
+    "title": "Boolean Masking",
+    "minutes": 20,
+    "objectives": [
+      "Define boolean masking and identify its input and output.",
+      "Predict how boolean masking changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Boolean Masking",
+        "meaning": "Select elements matching a condition"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The Boolean mask must align with the data."
+      }
+    ],
+    "explanation": [
+      "Select elements matching a condition",
+      "The Boolean mask must align with the data.",
+      "Worked example: arr[arr > 0]",
+      "Application: Remove negative samples. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Boolean Masking → observed result and validation",
+    "source": "arr[arr > 0]",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Remove negative samples",
+      "Add a boolean masking operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Boolean Masking?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Select elements matching a condition"
+      ],
+      "answer": 3,
+      "explanation": "Select elements matching a condition"
+    },
+    "repair": {
+      "source": "arr[arr > 0]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "The Boolean mask must align with the data."
+    },
+    "build": "Use boolean masking on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused boolean masking demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with boolean masking; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-14",
+    "number": 14,
+    "world": "numpy",
+    "title": "Broadcasting",
+    "minutes": 20,
+    "objectives": [
+      "Define broadcasting and identify its input and output.",
+      "Predict how broadcasting changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Broadcasting",
+        "meaning": "Combine compatible shapes elementwise"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Dimensions align from the trailing axes."
+      }
+    ],
+    "explanation": [
+      "Combine compatible shapes elementwise",
+      "Dimensions align from the trailing axes.",
+      "Worked example: arr + 5",
+      "Application: Normalize multiple records in one operation. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Broadcasting → observed result and validation",
+    "source": "arr + 5",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Normalize multiple records in one operation",
+      "Add a broadcasting operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Broadcasting?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Combine compatible shapes elementwise",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Combine compatible shapes elementwise"
+    },
+    "repair": {
+      "source": "arr + 5",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Dimensions align from the trailing axes."
+    },
+    "build": "Use broadcasting on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused broadcasting demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with broadcasting; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-15",
+    "number": 15,
+    "world": "numpy",
+    "title": "Sum",
+    "minutes": 20,
+    "objectives": [
+      "Define sum and identify its input and output.",
+      "Predict how sum changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Sum",
+        "meaning": "Reduce array elements by addition"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Choose axis to summarize rows or columns."
+      }
+    ],
+    "explanation": [
+      "Reduce array elements by addition",
+      "Choose axis to summarize rows or columns.",
+      "Worked example: np.sum(arr)",
+      "Application: Calculate total study hours. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Sum → observed result and validation",
+    "source": "np.sum(arr)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Calculate total study hours",
+      "Add a sum operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Sum?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Reduce array elements by addition",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Reduce array elements by addition"
+    },
+    "repair": {
+      "source": "np.sum(arr)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Choose axis to summarize rows or columns."
+    },
+    "build": "Use sum on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused sum demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with sum; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-16",
+    "number": 16,
+    "world": "numpy",
+    "title": "Mean",
+    "minutes": 20,
+    "objectives": [
+      "Define mean and identify its input and output.",
+      "Predict how mean changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Mean",
+        "meaning": "Calculate arithmetic average"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "An empty array yields undefined mean."
+      }
+    ],
+    "explanation": [
+      "Calculate arithmetic average",
+      "An empty array yields undefined mean.",
+      "Worked example: np.mean(arr)",
+      "Application: Average results for one learner. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Mean → observed result and validation",
+    "source": "np.mean(arr)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Average results for one learner",
+      "Add a mean operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Mean?",
+      "options": [
+        "Calculate arithmetic average",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Calculate arithmetic average"
+    },
+    "repair": {
+      "source": "np.mean(arr)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "An empty array yields undefined mean."
+    },
+    "build": "Use mean on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused mean demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with mean; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-17",
+    "number": 17,
+    "world": "numpy",
+    "title": "Std Dev",
+    "minutes": 20,
+    "objectives": [
+      "Define std dev and identify its input and output.",
+      "Predict how std dev changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Std Dev",
+        "meaning": "Measure variation around the mean"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "NumPy defaults to population standard deviation."
+      }
+    ],
+    "explanation": [
+      "Measure variation around the mean",
+      "NumPy defaults to population standard deviation.",
+      "Worked example: np.std(arr)",
+      "Application: Quantify consistency of study sessions. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Std Dev → observed result and validation",
+    "source": "np.std(arr)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Quantify consistency of study sessions",
+      "Add a std dev operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Std Dev?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Measure variation around the mean"
+      ],
+      "answer": 3,
+      "explanation": "Measure variation around the mean"
+    },
+    "repair": {
+      "source": "np.std(arr)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "NumPy defaults to population standard deviation."
+    },
+    "build": "Use std dev on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused std dev demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with std dev; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-18",
+    "number": 18,
+    "world": "numpy",
+    "title": "Min / Max",
+    "minutes": 20,
+    "objectives": [
+      "Define min / max and identify its input and output.",
+      "Predict how min / max changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Min / Max",
+        "meaning": "Find smallest and largest array values"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "An empty array needs special handling."
+      }
+    ],
+    "explanation": [
+      "Find smallest and largest array values",
+      "An empty array needs special handling.",
+      "Worked example: np.min(arr), np.max(arr)",
+      "Application: Track extremes in quiz results. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Min / Max → observed result and validation",
+    "source": "np.min(arr), np.max(arr)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Track extremes in quiz results",
+      "Add a min / max operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Min / Max?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Find smallest and largest array values",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Find smallest and largest array values"
+    },
+    "repair": {
+      "source": "np.min(arr), np.max(arr)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "An empty array needs special handling."
+    },
+    "build": "Use min / max on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused min / max demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with min / max; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-19",
+    "number": 19,
+    "world": "numpy",
+    "title": "Argmax/Argmin",
+    "minutes": 20,
+    "objectives": [
+      "Define argmax/argmin and identify its input and output.",
+      "Predict how argmax/argmin changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Argmax/Argmin",
+        "meaning": "Return positions of extreme elements"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Flattening is the default without axis."
+      }
+    ],
+    "explanation": [
+      "Return positions of extreme elements",
+      "Flattening is the default without axis.",
+      "Worked example: np.argmax(arr), np.argmin(arr)",
+      "Application: Locate best/worst assessment. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Argmax/Argmin → observed result and validation",
+    "source": "np.argmax(arr), np.argmin(arr)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Locate best/worst assessment",
+      "Add a argmax/argmin operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Argmax/Argmin?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Return positions of extreme elements",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Return positions of extreme elements"
+    },
+    "repair": {
+      "source": "np.argmax(arr), np.argmin(arr)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Flattening is the default without axis."
+    },
+    "build": "Use argmax/argmin on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused argmax/argmin demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with argmax/argmin; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-20",
+    "number": 20,
+    "world": "numpy",
+    "title": "Concatenate",
+    "minutes": 20,
+    "objectives": [
+      "Define concatenate and identify its input and output.",
+      "Predict how concatenate changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Concatenate",
+        "meaning": "Join compatible arrays along an axis"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Shapes must match along other axes."
+      }
+    ],
+    "explanation": [
+      "Join compatible arrays along an axis",
+      "Shapes must match along other axes.",
+      "Worked example: np.concatenate((a, b))",
+      "Application: Combine numeric batches. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Concatenate → observed result and validation",
+    "source": "np.concatenate((a, b))",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Combine numeric batches",
+      "Add a concatenate operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Concatenate?",
+      "options": [
+        "Join compatible arrays along an axis",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Join compatible arrays along an axis"
+    },
+    "repair": {
+      "source": "np.concatenate((a, b))",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Shapes must match along other axes."
+    },
+    "build": "Use concatenate on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused concatenate demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with concatenate; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-21",
+    "number": 21,
+    "world": "numpy",
+    "title": "Split",
+    "minutes": 20,
+    "objectives": [
+      "Define split and identify its input and output.",
+      "Predict how split changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Split",
+        "meaning": "Divide an array into subarrays"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Equal splitting requires a divisible axis length."
+      }
+    ],
+    "explanation": [
+      "Divide an array into subarrays",
+      "Equal splitting requires a divisible axis length.",
+      "Worked example: np.split(arr, 3)",
+      "Application: Create equal batches. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Split → observed result and validation",
+    "source": "np.split(arr, 3)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Create equal batches",
+      "Add a split operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Split?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Divide an array into subarrays"
+      ],
+      "answer": 3,
+      "explanation": "Divide an array into subarrays"
+    },
+    "repair": {
+      "source": "np.split(arr, 3)",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Equal splitting requires a divisible axis length."
+    },
+    "build": "Use split on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused split demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with split; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-22",
+    "number": 22,
+    "world": "numpy",
+    "title": "Stack",
+    "minutes": 20,
+    "objectives": [
+      "Define stack and identify its input and output.",
+      "Predict how stack changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Stack",
+        "meaning": "Combine arrays on a new axis"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Inputs must have matching shapes."
+      }
+    ],
+    "explanation": [
+      "Combine arrays on a new axis",
+      "Inputs must have matching shapes.",
+      "Worked example: np.stack((a, b))",
+      "Application: Build feature channels. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Stack → observed result and validation",
+    "source": "np.stack((a, b))",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Build feature channels",
+      "Add a stack operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Stack?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Combine arrays on a new axis",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Combine arrays on a new axis"
+    },
+    "repair": {
+      "source": "np.stack((a, b))",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Inputs must have matching shapes."
+    },
+    "build": "Use stack on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused stack demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with stack; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-23",
+    "number": 23,
+    "world": "numpy",
+    "title": "Identity Matrix",
+    "minutes": 20,
+    "objectives": [
+      "Define identity matrix and identify its input and output.",
+      "Predict how identity matrix changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Identity Matrix",
+        "meaning": "Create a matrix with ones on the diagonal"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "The identity leaves compatible vectors unchanged when multiplied."
+      }
+    ],
+    "explanation": [
+      "Create a matrix with ones on the diagonal",
+      "The identity leaves compatible vectors unchanged when multiplied.",
+      "Worked example: np.eye(3)",
+      "Application: Build identity transformations. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Identity Matrix → observed result and validation",
+    "source": "np.eye(3)",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Build identity transformations",
+      "Add a identity matrix operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Identity Matrix?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Create a matrix with ones on the diagonal",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Create a matrix with ones on the diagonal"
+    },
+    "repair": {
+      "source": "np.eye(3)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "The identity leaves compatible vectors unchanged when multiplied."
+    },
+    "build": "Use identity matrix on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused identity matrix demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with identity matrix; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "np-24",
+    "number": 24,
+    "world": "numpy",
+    "title": "Matrix Operations",
+    "minutes": 20,
+    "objectives": [
+      "Define matrix operations and identify its input and output.",
+      "Predict how matrix operations changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Matrix Operations",
+        "meaning": "Perform matrix multiplication"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Matrix multiplication differs from elementwise *."
+      }
+    ],
+    "explanation": [
+      "Perform matrix multiplication",
+      "Matrix multiplication differs from elementwise *.",
+      "Worked example: A @ B",
+      "Application: Combine features and learned weights. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Matrix Operations → observed result and validation",
+    "source": "A @ B",
+    "expected": "Inspect the resulting shape, values, and dtype.",
+    "applications": [
+      "Combine features and learned weights",
+      "Add a matrix operations operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Matrix Operations?",
+      "options": [
+        "Perform matrix multiplication",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Perform matrix multiplication"
+    },
+    "repair": {
+      "source": "A @ B",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Matrix multiplication differs from elementwise *."
+    },
+    "build": "Use matrix operations on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused matrix operations demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with matrix operations; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  }
+]

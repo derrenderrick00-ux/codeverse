@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2022","lib":["ES2022","DOM"],"module":"ESNext","moduleResolution":"Bundler","strict":true,"skipLibCheck":true,"noEmit":true,"noUnusedLocals":true,"noUnusedParameters":true},"include":["src/types.ts","src/storage/progress.ts","src/engine/domains/experiments.ts","src/engine/execution/interpreter.ts","src/engine/execution/challenges.ts"]}

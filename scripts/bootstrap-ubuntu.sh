@@ -20,4 +20,4 @@ npm run lint
 npm test
 npm run build
 printf '\nSetup complete. Run: npm run dev\n'
-echo 'Make your first commit when you inspect the source: git add . && git commit -m "feat: CODEVERSE phases 1-8 foundation"'
+echo 'Make your first commit when you inspect the source: git add . && git commit -m "feat: CODEVERSE phases 1-12 upgrade"'

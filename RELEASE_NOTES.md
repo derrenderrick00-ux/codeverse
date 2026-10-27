@@ -1,27 +1,13 @@
-# CODEVERSE Release Notes
+# CODEVERSE v0.6.0-alpha.1 — Lockstep learning and five-world laboratories
 
-## v0.5.0-alpha.1 · 2026-10-27
+Baseline: v0.5.0-alpha.1, user's first pushed commit `7b180e5`.
 
-Initial source preview through the phase-8 planning horizon, **without claiming that full Phase 8 is accepted**.
+- **Fixed:** inline `# TODO` comments after arithmetic assignments in Python tracer no longer become part of the expression.
+- **Added:** nine-step sequential gates and cross-lesson prerequisites; route guarding; progress resume and explicit checkpoint completion.
+- **Added:** IndexedDB schema v2, v1 migration, safe exports/imports, persisted journals.
+- **Added:** SQL (24), Pandas (25), NumPy (24), ML (16) lesson libraries, each using the nine-part teaching method, plus the Python world (21), totaling **110 missions**.
+- **Added:** reproducible, bounded data transformation experiments, real JavaScript gradient descent and a training loss plot.
+- **Added:** real Python command-line reference programs for SQLite, Pandas, NumPy and scikit-learn, plus Python standard-library and optional scientific tests.
+- **Added:** core regression smoke suite, Vitest cases, browser acceptance tests, upgrade/rollback guide and test matrix.
 
-### Available
-- Hybrid 2D/3D React application with eight screens and a Five World Atlas.
-- Twenty-one ordered Python learning missions, each organized around nine learning steps.
-- Executable deterministic restricted-language tracing for early Python topics.
-- Name/reference diagrams, state timeline, editor, output, play/pause, seek, step-back and reset.
-- Guided, clearly labeled explanations for advanced Python syntax.
-- Predict / Repair / Build challenges, automatic student-profile mini-project checker.
-- IndexedDB progress and schema-validated JSON import/export.
-- Browser tests and unit test sources, Ubuntu setup and repository guidance.
-
-### Evidence
-- 19/19 independent kernel smoke assertions passed.
-- 20/20 reference Python examples executed with correct output.
-
-### Not yet verified or supported
-- npm dependency install, production React build, Vitest and Playwright on actual Ubuntu target (user-run checks outstanding).
-- Fully implemented Python language interpreter, full Phase 8 automatic challenges and mini-project validations.
-- SQL, Pandas, NumPy, ML runtime lessons, any remote account or GitHub repo creation.
-
-### Next milestone
-Verify on owner's Ubuntu laptop, record results, repair any environment-specific issues, then expand safe execution and grading for Python City.
+**Limitations:** Actual unrestricted code execution for complete Python/SQL/Pandas/NumPy and authoritative automated grading for advanced exercises remain out of scope. Structured journals and learner-confirmed terminal evidence are not code-verification mechanisms. Full browser and Vite build acceptance still requires the Ubuntu test run.

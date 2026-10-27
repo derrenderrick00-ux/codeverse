@@ -1,9 +1,13 @@
 import {describe,it,expect} from 'vitest';
-import {defaultProgress,statusOf,parseBackup,makeBackup,isProgress} from '../storage/progress';
-describe('progress evidence and validated backups',()=>{
- it('starts not started',()=>expect(statusOf(defaultProgress())).toBe('not-started'));
- it('requires all learning and practical gates to demonstrate',()=>{const p=defaultProgress();p.visited=[1,2,3,4,5,6,7,8,9];p.quizPassed=true;expect(statusOf(p)).toBe('practicing');p.predictPassed=p.repairPassed=p.buildPassed=p.projectDone=p.mainDone=true;expect(statusOf(p)).toBe('demonstrated');});
- it('round trips valid data',()=>{const p=defaultProgress();p.visited=[1,5];const backup=makeBackup({'py-01':p});expect(parseBackup(backup)['py-01'].visited).toEqual([1,5]);});
- it('rejects bad JSON and invalid version',()=>{expect(()=>parseBackup('{')).toThrow();expect(()=>parseBackup('{"schemaVersion":999,"progress":{}}')).toThrow();});
- it('rejects corrupt records and duplicate visited steps',()=>{const p=defaultProgress();p.visited=[1,1];expect(isProgress(p)).toBe(false);expect(()=>parseBackup(JSON.stringify({schemaVersion:1,progress:{'py-01':p}}))).toThrow();});
+import {defaultProgress,statusOf,parseBackup,makeBackup,isProgress,canOpenStep,canOpenLesson,canFinishStep,finishStep} from '../storage/progress';
+const nine=Array.from({length:9},(_,i)=>i+1);
+describe('sequential progression and versioned local backups',()=>{
+ it('begins empty and locks later checkpoints',()=>{const p=defaultProgress();expect(statusOf(p)).toBe('not-started');expect(canOpenStep(p,1)).toBe(true);expect(canOpenStep(p,2)).toBe(false);expect(canFinishStep(p,7)).toBe(false);});
+ it('advances one reviewed checkpoint at a time',()=>{const first=finishStep(defaultProgress(),1);expect(first.completedSteps).toEqual([1]);expect(canOpenStep(first,2)).toBe(true);expect(()=>finishStep(first,4)).toThrow();});
+ it('rejects an unverified assessment and project',()=>{const p=defaultProgress();p.completedSteps=[1,2,3,4,5,6];expect(canOpenStep(p,7)).toBe(true);expect(()=>finishStep(p,7)).toThrow();p.quizPassed=p.predictPassed=p.repairPassed=p.simulationPassed=true;p.completedSteps=nine.slice(0,6);const result=finishStep(p,7);expect(canOpenStep(result,8)).toBe(true);expect(canFinishStep(result,8)).toBe(false);});
+ it('requires every step and evidence flag to demonstrate mastery',()=>{const p=defaultProgress();p.visited=nine;p.completedSteps=nine;p.quizPassed=true;expect(statusOf(p)).not.toBe('demonstrated');p.predictPassed=p.repairPassed=p.buildPassed=p.projectDone=p.mainDone=p.simulationPassed=true;expect(statusOf(p)).toBe('demonstrated');});
+ it('locks the next lesson until its immediate prerequisite is mastered',()=>{const lessons=[{id:'py-01'},{id:'py-02'},{id:'sql-01'}];const map={'py-01':defaultProgress()};expect(canOpenLesson(lessons,'py-01',map)).toBe(true);expect(canOpenLesson(lessons,'py-02',map)).toBe(false);const p=defaultProgress();p.completedSteps=nine;p.quizPassed=p.predictPassed=p.repairPassed=p.buildPassed=p.projectDone=p.mainDone=p.simulationPassed=true;map['py-01']=p;expect(canOpenLesson(lessons,'py-02',map)).toBe(true);expect(canOpenLesson(lessons,'sql-01',map)).toBe(false);});
+ it('round-trips multi-world progress without losing notes',()=>{const p=defaultProgress();p.visited=[1,2];p.integrationNotes='Testing SQL';const backup=makeBackup({'sql-01':p});expect(parseBackup(backup)['sql-01'].integrationNotes).toBe('Testing SQL');});
+ it('migrates old v1 backups without dropping visited lessons',()=>{const p=defaultProgress();p.visited=[1,2,3];delete p.completedSteps;delete p.simulationPassed;const restored=parseBackup(JSON.stringify({schemaVersion:1,progress:{'py-01':p}}));expect(restored['py-01'].completedSteps).toEqual([1,2,3]);expect(restored['py-01'].visited).toEqual([1,2,3]);});
+ it('refuses malformed data without resetting',()=>{expect(()=>parseBackup('{')).toThrow();expect(()=>parseBackup('{"schemaVersion":999,"progress":{}}')).toThrow();const p=defaultProgress();p.visited=[1,1];expect(isProgress(p)).toBe(false);expect(()=>parseBackup(JSON.stringify({schemaVersion:2,progress:{'py-01':p}}))).toThrow();});
 });

@@ -31,8 +31,8 @@ check('mini-project correct calculation',()=>assert.equal(gradeStudentProfile(go
 check('mini-project wrong calculation fails',()=>assert.equal(gradeStudentProfile(good.replace('percentage=100*completed/total','percentage=80')).pass,false));
 check('rejects hard-coded Variables outputs',()=>assert.equal(gradeVariablesBuild('print(20)\nprint(10)').pass,false));
 check('accepts authentic Variables bindings',()=>assert.equal(gradeVariablesBuild('x = 10\ny = x\nx = 20\nprint(x)\nprint(y)').pass,true));
-check('progress requires all evidence gates',()=>{const p=defaultProgress();assert.equal(statusOf(p),'not-started');p.visited=[1,2,3,4,5,6,7,8,9];p.quizPassed=true;assert.equal(statusOf(p),'practicing');p.predictPassed=p.repairPassed=p.buildPassed=p.projectDone=p.mainDone=true;assert.equal(statusOf(p),'demonstrated');});
+check('progress requires all evidence gates',()=>{const p=defaultProgress();assert.equal(statusOf(p),'not-started');p.visited=[1,2,3,4,5,6,7,8,9];p.quizPassed=true;assert.equal(statusOf(p),'practicing');p.predictPassed=p.repairPassed=p.buildPassed=p.projectDone=p.mainDone=p.simulationPassed=true;p.completedSteps=[1,2,3,4,5,6,7,8,9];assert.equal(statusOf(p),'demonstrated');});
 check('backup roundtrip',()=>{const p=defaultProgress();p.visited=[1,2];assert.deepEqual(parseBackup(makeBackup({'py-01':p}))['py-01'].visited,[1,2]);});
-check('malformed backup rejected',()=>{assert.throws(()=>parseBackup('not json'));assert.throws(()=>parseBackup('{\"schemaVersion\":2,\"progress\":{}}'));});
+check('malformed backup rejected',()=>{assert.throws(()=>parseBackup('not json'));assert.throws(()=>parseBackup('{\"schemaVersion\":999,\"progress\":{}}'));});
 console.log(`PASS ${count}/${count} offline kernel smoke assertions`);
 JS

@@ -1,5 +1,8 @@
 {
-  "name": "codeverse", "private": true, "version": "0.5.0-alpha.1", "type": "module",
+  "name": "codeverse",
+  "private": true,
+  "version": "0.6.0-alpha.1",
+  "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && vite build",
@@ -8,7 +11,12 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "lint": "tsc --noEmit",
-    "audit:phase0": "bash scripts/phase0-audit.sh"
+    "audit:phase0": "bash scripts/phase0-audit.sh",
+    "test:kernel": "node scripts/kernel-smoke.cjs",
+    "test:python": "python3 -m unittest discover -s tests_python -v",
+    "check:kernel": "tsc -p tsconfig.kernel.json",
+    "verify": "bash scripts/verify-release.sh",
+    "test:syntax": "node scripts/syntax-check.cjs"
   },
   "dependencies": {
     "@codemirror/lang-python": "^6.2.1",

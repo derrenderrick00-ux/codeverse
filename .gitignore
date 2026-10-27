@@ -9,3 +9,10 @@ test-results/
 *.log
 .DS_Store
 *.local
+.venv/
+__pycache__/
+*.pyc
+study_intelligence.db
+study_summary.csv
+tsconfig.tsbuildinfo
+*.tsbuildinfo

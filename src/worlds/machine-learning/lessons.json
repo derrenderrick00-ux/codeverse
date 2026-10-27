@@ -1,0 +1,978 @@
+[
+  {
+    "id": "ml-01",
+    "number": 1,
+    "world": "ml",
+    "title": "Problem Framing",
+    "minutes": 20,
+    "objectives": [
+      "Define problem framing and identify its input and output.",
+      "Predict how problem framing changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Problem Framing",
+        "meaning": "Turn a question into a measurable prediction task"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Choose target, features, baseline and success metric before training."
+      }
+    ],
+    "explanation": [
+      "Turn a question into a measurable prediction task",
+      "Choose target, features, baseline and success metric before training.",
+      "Worked example: Predict next-week study score from study hours",
+      "Application: Study planning. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Problem Framing → observed result and validation",
+    "source": "Predict next-week study score from study hours",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Study planning",
+      "Add a problem framing operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Problem Framing?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Turn a question into a measurable prediction task"
+      ],
+      "answer": 3,
+      "explanation": "Turn a question into a measurable prediction task"
+    },
+    "repair": {
+      "source": "Predict next-week study score from study hours",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Choose target, features, baseline and success metric before training."
+    },
+    "build": "Use problem framing on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused problem framing demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with problem framing; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-02",
+    "number": 2,
+    "world": "ml",
+    "title": "Datasets & Features",
+    "minutes": 20,
+    "objectives": [
+      "Define datasets & features and identify its input and output.",
+      "Predict how datasets & features changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Datasets & Features",
+        "meaning": "Separate observations into inputs and labels"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Features must be available at prediction time."
+      }
+    ],
+    "explanation": [
+      "Separate observations into inputs and labels",
+      "Features must be available at prediction time.",
+      "Worked example: X = [[1], [2], [3]]; y = [45, 55, 65]",
+      "Application: Prepare training data. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Datasets & Features → observed result and validation",
+    "source": "X = [[1], [2], [3]]; y = [45, 55, 65]",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Prepare training data",
+      "Add a datasets & features operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Datasets & Features?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Separate observations into inputs and labels",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Separate observations into inputs and labels"
+    },
+    "repair": {
+      "source": "X = [[1], [2], [3]]; y = [45, 55, 65]",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Features must be available at prediction time."
+    },
+    "build": "Use datasets & features on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused datasets & features demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with datasets & features; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-03",
+    "number": 3,
+    "world": "ml",
+    "title": "Train / Validation / Test",
+    "minutes": 20,
+    "objectives": [
+      "Define train / validation / test and identify its input and output.",
+      "Predict how train / validation / test changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Train / Validation / Test",
+        "meaning": "Separate learning, tuning and final evaluation data"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Fit preprocessing using training data only."
+      }
+    ],
+    "explanation": [
+      "Separate learning, tuning and final evaluation data",
+      "Fit preprocessing using training data only.",
+      "Worked example: Train 70%; validate 15%; test 15%",
+      "Application: Avoid evaluating on memorized records. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Train / Validation / Test → observed result and validation",
+    "source": "Train 70%; validate 15%; test 15%",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Avoid evaluating on memorized records",
+      "Add a train / validation / test operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Train / Validation / Test?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Separate learning, tuning and final evaluation data",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Separate learning, tuning and final evaluation data"
+    },
+    "repair": {
+      "source": "Train 70%; validate 15%; test 15%",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Fit preprocessing using training data only."
+    },
+    "build": "Use train / validation / test on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused train / validation / test demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with train / validation / test; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-04",
+    "number": 4,
+    "world": "ml",
+    "title": "Data Leakage",
+    "minutes": 20,
+    "objectives": [
+      "Define data leakage and identify its input and output.",
+      "Predict how data leakage changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Data Leakage",
+        "meaning": "Prevent information from the future entering training"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Leakage produces misleadingly optimistic accuracy."
+      }
+    ],
+    "explanation": [
+      "Prevent information from the future entering training",
+      "Leakage produces misleadingly optimistic accuracy.",
+      "Worked example: Never include final exam score as an input when predicting it",
+      "Application: Security and forecasting. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Data Leakage → observed result and validation",
+    "source": "Never include final exam score as an input when predicting it",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Security and forecasting",
+      "Add a data leakage operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Data Leakage?",
+      "options": [
+        "Prevent information from the future entering training",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Prevent information from the future entering training"
+    },
+    "repair": {
+      "source": "Never include final exam score as an input when predicting it",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Leakage produces misleadingly optimistic accuracy."
+    },
+    "build": "Use data leakage on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused data leakage demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with data leakage; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-05",
+    "number": 5,
+    "world": "ml",
+    "title": "Supervised Learning",
+    "minutes": 20,
+    "objectives": [
+      "Define supervised learning and identify its input and output.",
+      "Predict how supervised learning changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Supervised Learning",
+        "meaning": "Learn mappings from labeled examples"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Regression predicts numbers; classification predicts classes."
+      }
+    ],
+    "explanation": [
+      "Learn mappings from labeled examples",
+      "Regression predicts numbers; classification predicts classes.",
+      "Worked example: Model study hours against exam score",
+      "Application: Grade prediction. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Supervised Learning → observed result and validation",
+    "source": "Model study hours against exam score",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Grade prediction",
+      "Add a supervised learning operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Supervised Learning?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Learn mappings from labeled examples"
+      ],
+      "answer": 3,
+      "explanation": "Learn mappings from labeled examples"
+    },
+    "repair": {
+      "source": "Model study hours against exam score",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Regression predicts numbers; classification predicts classes."
+    },
+    "build": "Use supervised learning on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused supervised learning demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with supervised learning; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-06",
+    "number": 6,
+    "world": "ml",
+    "title": "Regression",
+    "minutes": 20,
+    "objectives": [
+      "Define regression and identify its input and output.",
+      "Predict how regression changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Regression",
+        "meaning": "Predict a continuous numeric target"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "A line can capture simple linear trends, not every relationship."
+      }
+    ],
+    "explanation": [
+      "Predict a continuous numeric target",
+      "A line can capture simple linear trends, not every relationship.",
+      "Worked example: prediction = weight * hours + bias",
+      "Application: Forecast expected assessment result. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Regression → observed result and validation",
+    "source": "prediction = weight * hours + bias",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Forecast expected assessment result",
+      "Add a regression operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Regression?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Predict a continuous numeric target",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Predict a continuous numeric target"
+    },
+    "repair": {
+      "source": "prediction = weight * hours + bias",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "A line can capture simple linear trends, not every relationship."
+    },
+    "build": "Use regression on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused regression demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with regression; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-07",
+    "number": 7,
+    "world": "ml",
+    "title": "Classification",
+    "minutes": 20,
+    "objectives": [
+      "Define classification and identify its input and output.",
+      "Predict how classification changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Classification",
+        "meaning": "Assign observations to discrete labels"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Choose metrics beyond accuracy for imbalanced classes."
+      }
+    ],
+    "explanation": [
+      "Assign observations to discrete labels",
+      "Choose metrics beyond accuracy for imbalanced classes.",
+      "Worked example: Predict pass or needs-support",
+      "Application: Route intervention recommendations. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Classification → observed result and validation",
+    "source": "Predict pass or needs-support",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Route intervention recommendations",
+      "Add a classification operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Classification?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Assign observations to discrete labels",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Assign observations to discrete labels"
+    },
+    "repair": {
+      "source": "Predict pass or needs-support",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Choose metrics beyond accuracy for imbalanced classes."
+    },
+    "build": "Use classification on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused classification demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with classification; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-08",
+    "number": 8,
+    "world": "ml",
+    "title": "k-Nearest Neighbors",
+    "minutes": 20,
+    "objectives": [
+      "Define k-nearest neighbors and identify its input and output.",
+      "Predict how k-nearest neighbors changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "k-Nearest Neighbors",
+        "meaning": "Predict based on nearby labeled samples"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Scaling affects distance-based methods."
+      }
+    ],
+    "explanation": [
+      "Predict based on nearby labeled samples",
+      "Scaling affects distance-based methods.",
+      "Worked example: Compare a new student with the closest known study records",
+      "Application: Recommendation prototypes. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → k-Nearest Neighbors → observed result and validation",
+    "source": "Compare a new student with the closest known study records",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Recommendation prototypes",
+      "Add a k-nearest neighbors operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes k-Nearest Neighbors?",
+      "options": [
+        "Predict based on nearby labeled samples",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Predict based on nearby labeled samples"
+    },
+    "repair": {
+      "source": "Compare a new student with the closest known study records",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Scaling affects distance-based methods."
+    },
+    "build": "Use k-nearest neighbors on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused k-nearest neighbors demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with k-nearest neighbors; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-09",
+    "number": 9,
+    "world": "ml",
+    "title": "Linear Regression & Gradient Descent",
+    "minutes": 20,
+    "objectives": [
+      "Define linear regression & gradient descent and identify its input and output.",
+      "Predict how linear regression & gradient descent changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Linear Regression & Gradient Descent",
+        "meaning": "Optimize slope and intercept by reducing squared error"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Gradient descent can diverge when the learning rate is too large."
+      }
+    ],
+    "explanation": [
+      "Optimize slope and intercept by reducing squared error",
+      "Gradient descent can diverge when the learning rate is too large.",
+      "Worked example: w = w - rate * gradient",
+      "Application: Train a transparent baseline model. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Linear Regression & Gradient Descent → observed result and validation",
+    "source": "w = w - rate * gradient",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Train a transparent baseline model",
+      "Add a linear regression & gradient descent operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Linear Regression & Gradient Descent?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Optimize slope and intercept by reducing squared error"
+      ],
+      "answer": 3,
+      "explanation": "Optimize slope and intercept by reducing squared error"
+    },
+    "repair": {
+      "source": "w = w - rate * gradient",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Gradient descent can diverge when the learning rate is too large."
+    },
+    "build": "Use linear regression & gradient descent on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused linear regression & gradient descent demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with linear regression & gradient descent; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-10",
+    "number": 10,
+    "world": "ml",
+    "title": "Model Metrics",
+    "minutes": 20,
+    "objectives": [
+      "Define model metrics and identify its input and output.",
+      "Predict how model metrics changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Model Metrics",
+        "meaning": "Measure generalization error using held-out data"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Measure performance against a naive baseline."
+      }
+    ],
+    "explanation": [
+      "Measure generalization error using held-out data",
+      "Measure performance against a naive baseline.",
+      "Worked example: MAE = mean(abs(actual - predicted))",
+      "Application: Audit model quality. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Model Metrics → observed result and validation",
+    "source": "MAE = mean(abs(actual - predicted))",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Audit model quality",
+      "Add a model metrics operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Model Metrics?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Measure generalization error using held-out data",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Measure generalization error using held-out data"
+    },
+    "repair": {
+      "source": "MAE = mean(abs(actual - predicted))",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Measure performance against a naive baseline."
+    },
+    "build": "Use model metrics on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused model metrics demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with model metrics; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-11",
+    "number": 11,
+    "world": "ml",
+    "title": "Overfitting & Regularization",
+    "minutes": 20,
+    "objectives": [
+      "Define overfitting & regularization and identify its input and output.",
+      "Predict how overfitting & regularization changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Overfitting & Regularization",
+        "meaning": "Balance training fit against unseen-data performance"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "More parameters can memorize noise instead of patterns."
+      }
+    ],
+    "explanation": [
+      "Balance training fit against unseen-data performance",
+      "More parameters can memorize noise instead of patterns.",
+      "Worked example: Reduce complexity if training error is low and validation error is high",
+      "Application: Robust prediction systems. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Overfitting & Regularization → observed result and validation",
+    "source": "Reduce complexity if training error is low and validation error is high",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Robust prediction systems",
+      "Add a overfitting & regularization operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Overfitting & Regularization?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Balance training fit against unseen-data performance",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Balance training fit against unseen-data performance"
+    },
+    "repair": {
+      "source": "Reduce complexity if training error is low and validation error is high",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "More parameters can memorize noise instead of patterns."
+    },
+    "build": "Use overfitting & regularization on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused overfitting & regularization demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with overfitting & regularization; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-12",
+    "number": 12,
+    "world": "ml",
+    "title": "Decision Trees",
+    "minutes": 20,
+    "objectives": [
+      "Define decision trees and identify its input and output.",
+      "Predict how decision trees changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Decision Trees",
+        "meaning": "Split feature space using learned rules"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Deep trees can overfit."
+      }
+    ],
+    "explanation": [
+      "Split feature space using learned rules",
+      "Deep trees can overfit.",
+      "Worked example: IF hours>=3 THEN likely pass",
+      "Application: Explainable recommendation rules. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Decision Trees → observed result and validation",
+    "source": "IF hours>=3 THEN likely pass",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Explainable recommendation rules",
+      "Add a decision trees operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Decision Trees?",
+      "options": [
+        "Split feature space using learned rules",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Split feature space using learned rules"
+    },
+    "repair": {
+      "source": "IF hours>=3 THEN likely pass",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Deep trees can overfit."
+    },
+    "build": "Use decision trees on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused decision trees demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with decision trees; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-13",
+    "number": 13,
+    "world": "ml",
+    "title": "Feature Scaling",
+    "minutes": 20,
+    "objectives": [
+      "Define feature scaling and identify its input and output.",
+      "Predict how feature scaling changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Feature Scaling",
+        "meaning": "Normalize features into comparable ranges"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Fit scaling parameters only on training records."
+      }
+    ],
+    "explanation": [
+      "Normalize features into comparable ranges",
+      "Fit scaling parameters only on training records.",
+      "Worked example: z = (x - mean) / std",
+      "Application: Distance-based models. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Feature Scaling → observed result and validation",
+    "source": "z = (x - mean) / std",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Distance-based models",
+      "Add a feature scaling operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Feature Scaling?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions.",
+        "Normalize features into comparable ranges"
+      ],
+      "answer": 3,
+      "explanation": "Normalize features into comparable ranges"
+    },
+    "repair": {
+      "source": "z = (x - mean) / std",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Verify assumptions and inspect the result.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 2,
+      "explanation": "Fit scaling parameters only on training records."
+    },
+    "build": "Use feature scaling on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused feature scaling demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with feature scaling; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-14",
+    "number": 14,
+    "world": "ml",
+    "title": "Cross-validation",
+    "minutes": 20,
+    "objectives": [
+      "Define cross-validation and identify its input and output.",
+      "Predict how cross-validation changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Cross-validation",
+        "meaning": "Rotate held-out folds to estimate stability"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Use time-aware splits for chronological records."
+      }
+    ],
+    "explanation": [
+      "Rotate held-out folds to estimate stability",
+      "Use time-aware splits for chronological records.",
+      "Worked example: 5-fold cross-validation",
+      "Application: Small-data evaluation. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Cross-validation → observed result and validation",
+    "source": "5-fold cross-validation",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Small-data evaluation",
+      "Add a cross-validation operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Cross-validation?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "Rotate held-out folds to estimate stability",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 2,
+      "explanation": "Rotate held-out folds to estimate stability"
+    },
+    "repair": {
+      "source": "5-fold cross-validation",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code.",
+        "Verify assumptions and inspect the result."
+      ],
+      "answer": 3,
+      "explanation": "Use time-aware splits for chronological records."
+    },
+    "build": "Use cross-validation on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused cross-validation demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with cross-validation; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-15",
+    "number": 15,
+    "world": "ml",
+    "title": "Neural Network Basics",
+    "minutes": 20,
+    "objectives": [
+      "Define neural network basics and identify its input and output.",
+      "Predict how neural network basics changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Neural Network Basics",
+        "meaning": "Compose weighted transformations and nonlinearities"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Neural networks need careful training and validation."
+      }
+    ],
+    "explanation": [
+      "Compose weighted transformations and nonlinearities",
+      "Neural networks need careful training and validation.",
+      "Worked example: output = activation(weight * input + bias)",
+      "Application: Explore nonlinear models. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Neural Network Basics → observed result and validation",
+    "source": "output = activation(weight * input + bias)",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Explore nonlinear models",
+      "Add a neural network basics operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Neural Network Basics?",
+      "options": [
+        "The operation always modifies the input permanently.",
+        "Compose weighted transformations and nonlinearities",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 1,
+      "explanation": "Compose weighted transformations and nonlinearities"
+    },
+    "repair": {
+      "source": "output = activation(weight * input + bias)",
+      "options": [
+        "Verify assumptions and inspect the result.",
+        "Skip validation and trust the animation.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 0,
+      "explanation": "Neural networks need careful training and validation."
+    },
+    "build": "Use neural network basics on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused neural network basics demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with neural network basics; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "ml-16",
+    "number": 16,
+    "world": "ml",
+    "title": "Deployment & Monitoring",
+    "minutes": 20,
+    "objectives": [
+      "Define deployment & monitoring and identify its input and output.",
+      "Predict how deployment & monitoring changes a real study dataset.",
+      "Explain limitations and validate the result independently."
+    ],
+    "definitions": [
+      {
+        "term": "Deployment & Monitoring",
+        "meaning": "Serve a versioned model and monitor drift"
+      },
+      {
+        "term": "Key insight",
+        "meaning": "Production predictions need latency, data-quality and drift monitoring."
+      }
+    ],
+    "explanation": [
+      "Serve a versioned model and monitor drift",
+      "Production predictions need latency, data-quality and drift monitoring.",
+      "Worked example: POST /predict with a schema-validated request",
+      "Application: Study Intelligence prediction API. Always inspect data types, missing values, and assumptions."
+    ],
+    "diagram": "Input → Deployment & Monitoring → observed result and validation",
+    "source": "POST /predict with a schema-validated request",
+    "expected": "Compare model outputs with the baseline and evaluation metric.",
+    "applications": [
+      "Study Intelligence prediction API",
+      "Add a deployment & monitoring operation to Study Intelligence and explain what could go wrong."
+    ],
+    "quiz": {
+      "question": "Which statement correctly describes Deployment & Monitoring?",
+      "options": [
+        "Serve a versioned model and monitor drift",
+        "The operation always modifies the input permanently.",
+        "The operation ignores input shape, types and constraints.",
+        "The operation is valid without checking its assumptions."
+      ],
+      "answer": 0,
+      "explanation": "Serve a versioned model and monitor drift"
+    },
+    "repair": {
+      "source": "POST /predict with a schema-validated request",
+      "options": [
+        "Skip validation and trust the animation.",
+        "Verify assumptions and inspect the result.",
+        "Treat the output as proof of a production-ready model.",
+        "Silently accept any unsupported code."
+      ],
+      "answer": 1,
+      "explanation": "Production predictions need latency, data-quality and drift monitoring."
+    },
+    "build": "Use deployment & monitoring on a small dataset, then state the input, result and validation check.",
+    "miniProject": "Create a focused deployment & monitoring demonstration using Study Intelligence data. Record assumptions and an example result.",
+    "mainProject": "Extend Study Intelligence with deployment & monitoring; preserve a reproducible before/after dataset.",
+    "supportedInTracer": false
+  }
+]
