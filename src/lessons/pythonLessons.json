@@ -1,0 +1,1274 @@
+[
+  {
+    "id": "py-01",
+    "number": 1,
+    "world": "python",
+    "title": "Variables",
+    "minutes": 25,
+    "objectives": [
+      "Explain name binding accurately in your own words.",
+      "Predict the example output for Variables without running it.",
+      "Implement and test a small variables exercise."
+    ],
+    "definitions": [
+      {
+        "term": "name binding",
+        "meaning": "A variable name is a reference to an object."
+      },
+      {
+        "term": "assignment",
+        "meaning": "= binds a name to an evaluated object."
+      }
+    ],
+    "explanation": [
+      "Names are labels, not boxes containing values.",
+      "After y = x both names can reference the same object.",
+      "Rebinding x does not rewrite y."
+    ],
+    "diagram": "Variable references",
+    "source": "x = 10\ny = x\nx = 20\nprint(x)\nprint(y)",
+    "expected": "20\n10",
+    "applications": [
+      "Engineering: Maintain a student name, score and completion status.",
+      "Study Intelligence: Store a learner name and completed sessions in Study Intelligence."
+    ],
+    "quiz": {
+      "question": "What does this Variables example demonstrate?",
+      "options": [
+        "A name can be rebound without changing a different name.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "A name can be rebound without changing a different name."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Variables",
+      "options": [
+        "Follow this rule: A name can be rebound without changing a different name.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "A name can be rebound without changing a different name."
+    },
+    "build": "Write a new Python example demonstrating Variables. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Maintain a student name, score and completion status.",
+    "mainProject": "Store a learner name and completed sessions in Study Intelligence.",
+    "supportedInTracer": true
+  },
+  {
+    "id": "py-02",
+    "number": 2,
+    "world": "python",
+    "title": "Data types",
+    "minutes": 25,
+    "objectives": [
+      "Explain type accurately in your own words.",
+      "Predict the example output for Data types without running it.",
+      "Implement and test a small data types exercise."
+    ],
+    "definitions": [
+      {
+        "term": "type",
+        "meaning": "Defines the operations supported by an object."
+      },
+      {
+        "term": "int",
+        "meaning": "An integer value."
+      },
+      {
+        "term": "str",
+        "meaning": "A sequence of Unicode characters."
+      }
+    ],
+    "explanation": [
+      "Python has integer, float, string, Boolean, list and other types.",
+      "type() reports an object’s type.",
+      "Converting between types must be deliberate to prevent mistakes."
+    ],
+    "diagram": "Value types",
+    "source": "count = 4\nlabel = \"study\"\nprint(count)\nprint(label)",
+    "expected": "4\nstudy",
+    "applications": [
+      "Engineering: Display and validate a student profile with different data types.",
+      "Study Intelligence: Introduce a typed session duration and topic name."
+    ],
+    "quiz": {
+      "question": "What does this Data types example demonstrate?",
+      "options": [
+        "\"4\" is a string, not an integer.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "\"4\" is a string, not an integer."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Data types",
+      "options": [
+        "Follow this rule: \"4\" is a string, not an integer.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "\"4\" is a string, not an integer."
+    },
+    "build": "Write a new Python example demonstrating Data types. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Display and validate a student profile with different data types.",
+    "mainProject": "Introduce a typed session duration and topic name.",
+    "supportedInTracer": true
+  },
+  {
+    "id": "py-03",
+    "number": 3,
+    "world": "python",
+    "title": "Lists",
+    "minutes": 25,
+    "objectives": [
+      "Explain list accurately in your own words.",
+      "Predict the example output for Lists without running it.",
+      "Implement and test a small lists exercise."
+    ],
+    "definitions": [
+      {
+        "term": "list",
+        "meaning": "An ordered mutable sequence."
+      },
+      {
+        "term": "index",
+        "meaning": "An integer position starting at zero."
+      }
+    ],
+    "explanation": [
+      "Square brackets create a list.",
+      "Indexing starts at 0; use an index to read one element.",
+      "append() mutates a list object, including through aliases."
+    ],
+    "diagram": "Shared mutable collection",
+    "source": "topics = [\"Python\", \"SQL\"]\nalias = topics\ntopics.append(\"Pandas\")\nprint(len(alias))",
+    "expected": "3",
+    "applications": [
+      "Engineering: Create a study-session task list.",
+      "Study Intelligence: Store completed lessons in a list."
+    ],
+    "quiz": {
+      "question": "What does this Lists example demonstrate?",
+      "options": [
+        "An alias observes mutation of the shared list.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "An alias observes mutation of the shared list."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Lists",
+      "options": [
+        "Follow this rule: An alias observes mutation of the shared list.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "An alias observes mutation of the shared list."
+    },
+    "build": "Write a new Python example demonstrating Lists. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Create a study-session task list.",
+    "mainProject": "Store completed lessons in a list.",
+    "supportedInTracer": true
+  },
+  {
+    "id": "py-04",
+    "number": 4,
+    "world": "python",
+    "title": "Tuples",
+    "minutes": 25,
+    "objectives": [
+      "Explain tuple accurately in your own words.",
+      "Predict the example output for Tuples without running it.",
+      "Implement and test a small tuples exercise."
+    ],
+    "definitions": [
+      {
+        "term": "tuple",
+        "meaning": "An ordered, generally immutable sequence."
+      },
+      {
+        "term": "packing",
+        "meaning": "Collecting multiple values into one tuple."
+      }
+    ],
+    "explanation": [
+      "Use parentheses or comma-separated values to make tuples.",
+      "A tuple cannot have its elements reassigned.",
+      "Useful for fixed-size records, coordinates and return values."
+    ],
+    "diagram": "Fixed record",
+    "source": "position = (2, 3)\nprint(position[0])",
+    "expected": "2",
+    "applications": [
+      "Engineering: Represent a topic ID and title as a fixed record.",
+      "Study Intelligence: Store immutable session descriptors."
+    ],
+    "quiz": {
+      "question": "What does this Tuples example demonstrate?",
+      "options": [
+        "The first position is 2; tuple entries cannot be assigned.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The first position is 2; tuple entries cannot be assigned."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Tuples",
+      "options": [
+        "Follow this rule: The first position is 2; tuple entries cannot be assigned.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The first position is 2; tuple entries cannot be assigned."
+    },
+    "build": "Write a new Python example demonstrating Tuples. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Represent a topic ID and title as a fixed record.",
+    "mainProject": "Store immutable session descriptors.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-05",
+    "number": 5,
+    "world": "python",
+    "title": "Sets",
+    "minutes": 25,
+    "objectives": [
+      "Explain set accurately in your own words.",
+      "Predict the example output for Sets without running it.",
+      "Implement and test a small sets exercise."
+    ],
+    "definitions": [
+      {
+        "term": "set",
+        "meaning": "An unordered collection of distinct hashable elements."
+      },
+      {
+        "term": "membership",
+        "meaning": "Testing whether a value belongs to a collection."
+      }
+    ],
+    "explanation": [
+      "Repeated values collapse into one set member.",
+      "Sets support union, intersection and difference.",
+      "Iteration order must not be relied upon."
+    ],
+    "diagram": "Uniqueness",
+    "source": "topics = {\"Python\", \"SQL\", \"Python\"}\nprint(len(topics))",
+    "expected": "2",
+    "applications": [
+      "Engineering: Deduplicate imported student subjects.",
+      "Study Intelligence: Deduplicate tags attached to study sessions."
+    ],
+    "quiz": {
+      "question": "What does this Sets example demonstrate?",
+      "options": [
+        "Duplicate \"Python\" contributes only once.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "Duplicate \"Python\" contributes only once."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Sets",
+      "options": [
+        "Follow this rule: Duplicate \"Python\" contributes only once.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "Duplicate \"Python\" contributes only once."
+    },
+    "build": "Write a new Python example demonstrating Sets. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Deduplicate imported student subjects.",
+    "mainProject": "Deduplicate tags attached to study sessions.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-06",
+    "number": 6,
+    "world": "python",
+    "title": "Dictionaries",
+    "minutes": 25,
+    "objectives": [
+      "Explain dict accurately in your own words.",
+      "Predict the example output for Dictionaries without running it.",
+      "Implement and test a small dictionaries exercise."
+    ],
+    "definitions": [
+      {
+        "term": "dict",
+        "meaning": "A mapping from hashable keys to values."
+      },
+      {
+        "term": "key",
+        "meaning": "A unique lookup identifier."
+      }
+    ],
+    "explanation": [
+      "Braces associate a key with a value.",
+      "Lookups use dict[key] or dict.get(key).",
+      "Updates replace a value for one key."
+    ],
+    "diagram": "Key-value lookup",
+    "source": "student = {\"name\": \"Derrick\", \"score\": 90}\nprint(student[\"score\"])",
+    "expected": "90",
+    "applications": [
+      "Engineering: Build a student profile record.",
+      "Study Intelligence: Represent a study session with structured fields."
+    ],
+    "quiz": {
+      "question": "What does this Dictionaries example demonstrate?",
+      "options": [
+        "Dictionary lookup uses a key rather than a numeric position.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "Dictionary lookup uses a key rather than a numeric position."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Dictionaries",
+      "options": [
+        "Follow this rule: Dictionary lookup uses a key rather than a numeric position.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "Dictionary lookup uses a key rather than a numeric position."
+    },
+    "build": "Write a new Python example demonstrating Dictionaries. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Build a student profile record.",
+    "mainProject": "Represent a study session with structured fields.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-07",
+    "number": 7,
+    "world": "python",
+    "title": "If / elif / else",
+    "minutes": 25,
+    "objectives": [
+      "Explain condition accurately in your own words.",
+      "Predict the example output for If / elif / else without running it.",
+      "Implement and test a small if / elif / else exercise."
+    ],
+    "definitions": [
+      {
+        "term": "condition",
+        "meaning": "A Boolean expression evaluated to True or False."
+      },
+      {
+        "term": "branch",
+        "meaning": "A code path taken when a condition is satisfied."
+      }
+    ],
+    "explanation": [
+      "Python tests if first, then eligible elif branches, then else.",
+      "Indentation defines each branch body.",
+      "Only the first matching branch executes."
+    ],
+    "diagram": "Decision branches",
+    "source": "score = 75\nif score >= 80:\n    print(\"Excellent\")\nelse:\n    print(\"Keep practising\")",
+    "expected": "Keep practising",
+    "applications": [
+      "Engineering: Classify a completion rate as on-track or behind.",
+      "Study Intelligence: Add success warnings to session goals."
+    ],
+    "quiz": {
+      "question": "What does this If / elif / else example demonstrate?",
+      "options": [
+        "75 does not meet the >=80 condition.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "75 does not meet the >=80 condition."
+    },
+    "repair": {
+      "source": "# Find the correct rule for If / elif / else",
+      "options": [
+        "Follow this rule: 75 does not meet the >=80 condition.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "75 does not meet the >=80 condition."
+    },
+    "build": "Write a new Python example demonstrating If / elif / else. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Classify a completion rate as on-track or behind.",
+    "mainProject": "Add success warnings to session goals.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-08",
+    "number": 8,
+    "world": "python",
+    "title": "For loops",
+    "minutes": 25,
+    "objectives": [
+      "Explain iteration accurately in your own words.",
+      "Predict the example output for For loops without running it.",
+      "Implement and test a small for loops exercise."
+    ],
+    "definitions": [
+      {
+        "term": "iteration",
+        "meaning": "Processing items one at a time."
+      },
+      {
+        "term": "iterable",
+        "meaning": "An object whose members can be visited."
+      }
+    ],
+    "explanation": [
+      "for binds the loop variable to each item.",
+      "range(n) generates integer positions 0 through n-1.",
+      "Avoid mutating a list unintentionally during iteration."
+    ],
+    "diagram": "Sequence traversal",
+    "source": "for topic in [\"Python\", \"SQL\"]:\n    print(topic)",
+    "expected": "Python\nSQL",
+    "applications": [
+      "Engineering: Display each assigned topic.",
+      "Study Intelligence: Calculate a progress report from sessions."
+    ],
+    "quiz": {
+      "question": "What does this For loops example demonstrate?",
+      "options": [
+        "The loop body executes once for each item.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The loop body executes once for each item."
+    },
+    "repair": {
+      "source": "# Find the correct rule for For loops",
+      "options": [
+        "Follow this rule: The loop body executes once for each item.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The loop body executes once for each item."
+    },
+    "build": "Write a new Python example demonstrating For loops. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Display each assigned topic.",
+    "mainProject": "Calculate a progress report from sessions.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-09",
+    "number": 9,
+    "world": "python",
+    "title": "While loops",
+    "minutes": 25,
+    "objectives": [
+      "Explain while accurately in your own words.",
+      "Predict the example output for While loops without running it.",
+      "Implement and test a small while loops exercise."
+    ],
+    "definitions": [
+      {
+        "term": "while",
+        "meaning": "A loop repeated while its condition is True."
+      },
+      {
+        "term": "termination",
+        "meaning": "An event that stops repetition."
+      }
+    ],
+    "explanation": [
+      "while checks a condition before each iteration.",
+      "Update loop state to avoid infinite loops.",
+      "Use break deliberately when an exit condition appears."
+    ],
+    "diagram": "Guarded repetition",
+    "source": "attempts = 0\nwhile attempts < 3:\n    attempts += 1\nprint(attempts)",
+    "expected": "3",
+    "applications": [
+      "Engineering: Build a CLI menu loop.",
+      "Study Intelligence: Keep a study timer running until stopped."
+    ],
+    "quiz": {
+      "question": "What does this While loops example demonstrate?",
+      "options": [
+        "The counter increases until the condition is false.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The counter increases until the condition is false."
+    },
+    "repair": {
+      "source": "# Find the correct rule for While loops",
+      "options": [
+        "Follow this rule: The counter increases until the condition is false.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The counter increases until the condition is false."
+    },
+    "build": "Write a new Python example demonstrating While loops. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Build a CLI menu loop.",
+    "mainProject": "Keep a study timer running until stopped.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-10",
+    "number": 10,
+    "world": "python",
+    "title": "Functions",
+    "minutes": 25,
+    "objectives": [
+      "Explain function accurately in your own words.",
+      "Predict the example output for Functions without running it.",
+      "Implement and test a small functions exercise."
+    ],
+    "definitions": [
+      {
+        "term": "function",
+        "meaning": "A reusable callable block."
+      },
+      {
+        "term": "parameter",
+        "meaning": "A name receiving input on invocation."
+      },
+      {
+        "term": "return",
+        "meaning": "A result provided to the caller."
+      }
+    ],
+    "explanation": [
+      "Define functions with def.",
+      "Parameters make one implementation reusable.",
+      "Use return to provide a value, rather than relying on print."
+    ],
+    "diagram": "Function call",
+    "source": "def percentage(completed, total):\n    return 100 * completed / total\nprint(percentage(7, 10))",
+    "expected": "70.0",
+    "applications": [
+      "Engineering: Create a reusable grade calculator.",
+      "Study Intelligence: Extract a progress-percentage helper."
+    ],
+    "quiz": {
+      "question": "What does this Functions example demonstrate?",
+      "options": [
+        "The function returns a number computed from inputs.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The function returns a number computed from inputs."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Functions",
+      "options": [
+        "Follow this rule: The function returns a number computed from inputs.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The function returns a number computed from inputs."
+    },
+    "build": "Write a new Python example demonstrating Functions. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Create a reusable grade calculator.",
+    "mainProject": "Extract a progress-percentage helper.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-11",
+    "number": 11,
+    "world": "python",
+    "title": "Lambda",
+    "minutes": 25,
+    "objectives": [
+      "Explain lambda accurately in your own words.",
+      "Predict the example output for Lambda without running it.",
+      "Implement and test a small lambda exercise."
+    ],
+    "definitions": [
+      {
+        "term": "lambda",
+        "meaning": "A small anonymous function expression."
+      },
+      {
+        "term": "callable",
+        "meaning": "An object that can be invoked."
+      }
+    ],
+    "explanation": [
+      "lambda expressions contain exactly one expression.",
+      "Useful for a short sort key or transformation.",
+      "Named def functions are clearer for complex logic."
+    ],
+    "diagram": "One-expression function",
+    "source": "double = lambda x: x * 2\nprint(double(4))",
+    "expected": "8",
+    "applications": [
+      "Engineering: Sort student scores with a custom key.",
+      "Study Intelligence: Create a sorting key for study durations."
+    ],
+    "quiz": {
+      "question": "What does this Lambda example demonstrate?",
+      "options": [
+        "An anonymous function computes 4×2.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "An anonymous function computes 4×2."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Lambda",
+      "options": [
+        "Follow this rule: An anonymous function computes 4×2.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "An anonymous function computes 4×2."
+    },
+    "build": "Write a new Python example demonstrating Lambda. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Sort student scores with a custom key.",
+    "mainProject": "Create a sorting key for study durations.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-12",
+    "number": 12,
+    "world": "python",
+    "title": "List comprehensions",
+    "minutes": 25,
+    "objectives": [
+      "Explain comprehension accurately in your own words.",
+      "Predict the example output for List comprehensions without running it.",
+      "Implement and test a small list comprehensions exercise."
+    ],
+    "definitions": [
+      {
+        "term": "comprehension",
+        "meaning": "A compact expression for constructing a new collection."
+      },
+      {
+        "term": "predicate",
+        "meaning": "An expression that selects members."
+      }
+    ],
+    "explanation": [
+      "A comprehension combines iteration, optional filtering and output expression.",
+      "It constructs a fresh list.",
+      "Prefer an explicit loop if readability suffers."
+    ],
+    "diagram": "Transform collection",
+    "source": "squares = [x*x for x in range(4)]\nprint(squares)",
+    "expected": "[0, 1, 4, 9]",
+    "applications": [
+      "Engineering: Convert raw marks to percentages.",
+      "Study Intelligence: Prepare completed-session summaries."
+    ],
+    "quiz": {
+      "question": "What does this List comprehensions example demonstrate?",
+      "options": [
+        "range(4) yields 0,1,2,3 and each is squared.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "range(4) yields 0,1,2,3 and each is squared."
+    },
+    "repair": {
+      "source": "# Find the correct rule for List comprehensions",
+      "options": [
+        "Follow this rule: range(4) yields 0,1,2,3 and each is squared.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "range(4) yields 0,1,2,3 and each is squared."
+    },
+    "build": "Write a new Python example demonstrating List comprehensions. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Convert raw marks to percentages.",
+    "mainProject": "Prepare completed-session summaries.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-13",
+    "number": 13,
+    "world": "python",
+    "title": "Exception handling",
+    "minutes": 25,
+    "objectives": [
+      "Explain exception accurately in your own words.",
+      "Predict the example output for Exception handling without running it.",
+      "Implement and test a small exception handling exercise."
+    ],
+    "definitions": [
+      {
+        "term": "exception",
+        "meaning": "A runtime event that interrupts ordinary control flow."
+      },
+      {
+        "term": "try/except",
+        "meaning": "Construct for controlled error recovery."
+      }
+    ],
+    "explanation": [
+      "Place failure-prone operations in try.",
+      "Catch only expected exception types.",
+      "finally executes cleanup when provided."
+    ],
+    "diagram": "Controlled failure",
+    "source": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")",
+    "expected": "Cannot divide by zero",
+    "applications": [
+      "Engineering: Validate a user-entered duration.",
+      "Study Intelligence: Keep malformed session input from crashing the app."
+    ],
+    "quiz": {
+      "question": "What does this Exception handling example demonstrate?",
+      "options": [
+        "The expected division error is handled.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The expected division error is handled."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Exception handling",
+      "options": [
+        "Follow this rule: The expected division error is handled.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The expected division error is handled."
+    },
+    "build": "Write a new Python example demonstrating Exception handling. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Validate a user-entered duration.",
+    "mainProject": "Keep malformed session input from crashing the app.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-14",
+    "number": 14,
+    "world": "python",
+    "title": "*args and **kwargs",
+    "minutes": 25,
+    "objectives": [
+      "Explain args accurately in your own words.",
+      "Predict the example output for *args and **kwargs without running it.",
+      "Implement and test a small *args and **kwargs exercise."
+    ],
+    "definitions": [
+      {
+        "term": "args",
+        "meaning": "Variadic positional arguments as a tuple."
+      },
+      {
+        "term": "kwargs",
+        "meaning": "Variadic named arguments as a dictionary."
+      }
+    ],
+    "explanation": [
+      "*args collects extra positional values.",
+      "**kwargs collects extra named values.",
+      "Use them when the calling interface genuinely varies."
+    ],
+    "diagram": "Flexible signatures",
+    "source": "def total(*scores):\n    return sum(scores)\nprint(total(4, 5))",
+    "expected": "9",
+    "applications": [
+      "Engineering: Calculate a total from an unknown number of scores.",
+      "Study Intelligence: Create a flexible session-report formatter."
+    ],
+    "quiz": {
+      "question": "What does this *args and **kwargs example demonstrate?",
+      "options": [
+        "scores is a tuple of supplied positional values.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "scores is a tuple of supplied positional values."
+    },
+    "repair": {
+      "source": "# Find the correct rule for *args and **kwargs",
+      "options": [
+        "Follow this rule: scores is a tuple of supplied positional values.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "scores is a tuple of supplied positional values."
+    },
+    "build": "Write a new Python example demonstrating *args and **kwargs. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Calculate a total from an unknown number of scores.",
+    "mainProject": "Create a flexible session-report formatter.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-15",
+    "number": 15,
+    "world": "python",
+    "title": "Classes",
+    "minutes": 25,
+    "objectives": [
+      "Explain class accurately in your own words.",
+      "Predict the example output for Classes without running it.",
+      "Implement and test a small classes exercise."
+    ],
+    "definitions": [
+      {
+        "term": "class",
+        "meaning": "A blueprint defining object behavior."
+      },
+      {
+        "term": "instance",
+        "meaning": "One object created from a class."
+      },
+      {
+        "term": "method",
+        "meaning": "A function associated with a class."
+      }
+    ],
+    "explanation": [
+      "A class defines fields and methods.",
+      "__init__ initializes instance state.",
+      "Keep each object’s mutable state independent."
+    ],
+    "diagram": "Object instances",
+    "source": "class Student:\n    def __init__(self, name):\n        self.name = name\nstudent = Student(\"Derrick\")\nprint(student.name)",
+    "expected": "Derrick",
+    "applications": [
+      "Engineering: Implement Student and Session classes.",
+      "Study Intelligence: Model a StudySession object."
+    ],
+    "quiz": {
+      "question": "What does this Classes example demonstrate?",
+      "options": [
+        "student holds one Student instance with a name attribute.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "student holds one Student instance with a name attribute."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Classes",
+      "options": [
+        "Follow this rule: student holds one Student instance with a name attribute.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "student holds one Student instance with a name attribute."
+    },
+    "build": "Write a new Python example demonstrating Classes. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Implement Student and Session classes.",
+    "mainProject": "Model a StudySession object.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-16",
+    "number": 16,
+    "world": "python",
+    "title": "Modules",
+    "minutes": 25,
+    "objectives": [
+      "Explain module accurately in your own words.",
+      "Predict the example output for Modules without running it.",
+      "Implement and test a small modules exercise."
+    ],
+    "definitions": [
+      {
+        "term": "module",
+        "meaning": "A Python file that can be imported."
+      },
+      {
+        "term": "import",
+        "meaning": "Statement making a module available."
+      }
+    ],
+    "explanation": [
+      "Organize related functions into separate .py files.",
+      "import loads a module once per interpreter instance in ordinary use.",
+      "Avoid circular dependencies and overshadowing standard modules."
+    ],
+    "diagram": "Reusable library",
+    "source": "import math\nprint(math.sqrt(16))",
+    "expected": "4.0",
+    "applications": [
+      "Engineering: Split utilities and CLI code into modules.",
+      "Study Intelligence: Separate models.py and reports.py."
+    ],
+    "quiz": {
+      "question": "What does this Modules example demonstrate?",
+      "options": [
+        "math.sqrt provides a standard-library function.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "math.sqrt provides a standard-library function."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Modules",
+      "options": [
+        "Follow this rule: math.sqrt provides a standard-library function.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "math.sqrt provides a standard-library function."
+    },
+    "build": "Write a new Python example demonstrating Modules. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Split utilities and CLI code into modules.",
+    "mainProject": "Separate models.py and reports.py.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-17",
+    "number": 17,
+    "world": "python",
+    "title": "map()",
+    "minutes": 25,
+    "objectives": [
+      "Explain map accurately in your own words.",
+      "Predict the example output for map() without running it.",
+      "Implement and test a small map() exercise."
+    ],
+    "definitions": [
+      {
+        "term": "map",
+        "meaning": "A lazy iterator applying a callable to values."
+      },
+      {
+        "term": "iterator",
+        "meaning": "An object yielding values on demand."
+      }
+    ],
+    "explanation": [
+      "map(function, iterable) transforms each element.",
+      "Consume with list() if a concrete list is needed.",
+      "A comprehension may be easier to read."
+    ],
+    "diagram": "Transform each value",
+    "source": "values = list(map(int, [\"2\", \"3\"]))\nprint(values)",
+    "expected": "[2, 3]",
+    "applications": [
+      "Engineering: Convert text-form quiz scores to integers.",
+      "Study Intelligence: Normalize imported numeric session data."
+    ],
+    "quiz": {
+      "question": "What does this map() example demonstrate?",
+      "options": [
+        "Each numeric string becomes an integer.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "Each numeric string becomes an integer."
+    },
+    "repair": {
+      "source": "# Find the correct rule for map()",
+      "options": [
+        "Follow this rule: Each numeric string becomes an integer.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "Each numeric string becomes an integer."
+    },
+    "build": "Write a new Python example demonstrating map(). Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Convert text-form quiz scores to integers.",
+    "mainProject": "Normalize imported numeric session data.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-18",
+    "number": 18,
+    "world": "python",
+    "title": "filter()",
+    "minutes": 25,
+    "objectives": [
+      "Explain filter accurately in your own words.",
+      "Predict the example output for filter() without running it.",
+      "Implement and test a small filter() exercise."
+    ],
+    "definitions": [
+      {
+        "term": "filter",
+        "meaning": "A lazy iterator retaining elements satisfying a predicate."
+      },
+      {
+        "term": "predicate",
+        "meaning": "A Boolean-valued condition."
+      }
+    ],
+    "explanation": [
+      "filter(function, iterable) keeps truthy results.",
+      "Values are not mutated.",
+      "A list comprehension may be more readable."
+    ],
+    "diagram": "Select subset",
+    "source": "values = list(filter(lambda x: x > 2, [1, 3, 4]))\nprint(values)",
+    "expected": "[3, 4]",
+    "applications": [
+      "Engineering: Select overdue study tasks.",
+      "Study Intelligence: Filter incomplete session records."
+    ],
+    "quiz": {
+      "question": "What does this filter() example demonstrate?",
+      "options": [
+        "Only elements greater than two survive.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "Only elements greater than two survive."
+    },
+    "repair": {
+      "source": "# Find the correct rule for filter()",
+      "options": [
+        "Follow this rule: Only elements greater than two survive.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "Only elements greater than two survive."
+    },
+    "build": "Write a new Python example demonstrating filter(). Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Select overdue study tasks.",
+    "mainProject": "Filter incomplete session records.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-19",
+    "number": 19,
+    "world": "python",
+    "title": "zip()",
+    "minutes": 25,
+    "objectives": [
+      "Explain zip accurately in your own words.",
+      "Predict the example output for zip() without running it.",
+      "Implement and test a small zip() exercise."
+    ],
+    "definitions": [
+      {
+        "term": "zip",
+        "meaning": "A lazy iterator pairing corresponding elements of iterables."
+      },
+      {
+        "term": "pair",
+        "meaning": "Two values grouped at one position."
+      }
+    ],
+    "explanation": [
+      "zip matches the first values, then second values, etc.",
+      "By default, pairing ends at the shortest iterable.",
+      "zip(..., strict=True) rejects unequal lengths."
+    ],
+    "diagram": "Parallel sequences",
+    "source": "for name, score in zip([\"A\", \"B\"], [7, 8]):\n    print(name, score)",
+    "expected": "A 7\nB 8",
+    "applications": [
+      "Engineering: Pair students with grades.",
+      "Study Intelligence: Merge topic names and durations into records."
+    ],
+    "quiz": {
+      "question": "What does this zip() example demonstrate?",
+      "options": [
+        "Names are paired with scores by position.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "Names are paired with scores by position."
+    },
+    "repair": {
+      "source": "# Find the correct rule for zip()",
+      "options": [
+        "Follow this rule: Names are paired with scores by position.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "Names are paired with scores by position."
+    },
+    "build": "Write a new Python example demonstrating zip(). Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Pair students with grades.",
+    "mainProject": "Merge topic names and durations into records.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-20",
+    "number": 20,
+    "world": "python",
+    "title": "File handling",
+    "minutes": 25,
+    "objectives": [
+      "Explain file handle accurately in your own words.",
+      "Predict the example output for File handling without running it.",
+      "Implement and test a small file handling exercise."
+    ],
+    "definitions": [
+      {
+        "term": "file handle",
+        "meaning": "A resource used for file I/O."
+      },
+      {
+        "term": "context manager",
+        "meaning": "A construct that handles resource setup and cleanup."
+      }
+    ],
+    "explanation": [
+      "Use with open(...) to close files reliably.",
+      "Different modes control reading, writing and appending.",
+      "Never overwrite valuable data without making a backup."
+    ],
+    "diagram": "Persistent data",
+    "source": "with open(\"notes.txt\", \"w\", encoding=\"utf-8\") as file:\n    file.write(\"Python\")\nprint(\"Saved\")",
+    "expected": "Saved",
+    "applications": [
+      "Engineering: Save a study-session text report.",
+      "Study Intelligence: Persist and restore sessions from JSON."
+    ],
+    "quiz": {
+      "question": "What does this File handling example demonstrate?",
+      "options": [
+        "The context manager closes notes.txt at block exit.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The context manager closes notes.txt at block exit."
+    },
+    "repair": {
+      "source": "# Find the correct rule for File handling",
+      "options": [
+        "Follow this rule: The context manager closes notes.txt at block exit.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The context manager closes notes.txt at block exit."
+    },
+    "build": "Write a new Python example demonstrating File handling. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Save a study-session text report.",
+    "mainProject": "Persist and restore sessions from JSON.",
+    "supportedInTracer": false
+  },
+  {
+    "id": "py-21",
+    "number": 21,
+    "world": "python",
+    "title": "Virtual environments",
+    "minutes": 25,
+    "objectives": [
+      "Explain venv accurately in your own words.",
+      "Predict the example output for Virtual environments without running it.",
+      "Implement and test a small virtual environments exercise."
+    ],
+    "definitions": [
+      {
+        "term": "venv",
+        "meaning": "An isolated Python installation context."
+      },
+      {
+        "term": "dependency",
+        "meaning": "A package required by a project."
+      }
+    ],
+    "explanation": [
+      "Create an environment with python3 -m venv .venv.",
+      "Activate with source .venv/bin/activate on Ubuntu.",
+      "Keep .venv out of Git, and record dependencies in requirements.txt."
+    ],
+    "diagram": "Reproducible setup",
+    "source": "python3 -m venv .venv\nsource .venv/bin/activate\npython --version",
+    "expected": "Displays the active Python version",
+    "applications": [
+      "Engineering: Create a separate environment for Study Intelligence.",
+      "Study Intelligence: Document installation and dependency pinning."
+    ],
+    "quiz": {
+      "question": "What does this Virtual environments example demonstrate?",
+      "options": [
+        "The venv isolates project-installed dependencies.",
+        "Python automatically stores this result in a SQL database.",
+        "The result proves that all Python values are mutable.",
+        "This program runs JavaScript instead of Python."
+      ],
+      "answer": 0,
+      "explanation": "The venv isolates project-installed dependencies."
+    },
+    "repair": {
+      "source": "# Find the correct rule for Virtual environments",
+      "options": [
+        "Follow this rule: The venv isolates project-installed dependencies.",
+        "Assume a Python variable can only store one type forever.",
+        "Ignore control flow, object type, and any errors.",
+        "Treat every Python operation as an SQL query."
+      ],
+      "answer": 0,
+      "explanation": "The venv isolates project-installed dependencies."
+    },
+    "build": "Write a new Python example demonstrating Virtual environments. Predict its output, then run it locally with python3 and explain the result.",
+    "miniProject": "Create a separate environment for Study Intelligence.",
+    "mainProject": "Document installation and dependency pinning.",
+    "supportedInTracer": false
+  }
+]
