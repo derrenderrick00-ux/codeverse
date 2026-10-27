@@ -1,3 +1,5 @@
+> **v0.6.1-alpha.1 corrective patch:** Review [patch instructions](docs/PATCH_V061_GUIDE.md) and [test report](docs/PATCH_V061_TEST_RESULTS.md) before applying.
+
 > **v0.6.0-alpha.1 upgrade:** See [Upgrade Guide](docs/UPGRADE_V06.md), [Phase Status](docs/PHASES_0_TO_12_STATUS.md), [Test Matrix](docs/TEST_MATRIX_V06.md) and [Real Python Examples](examples/README.md). This release has 110 lessons across all five worlds. Sequential checkpoints are mandatory; complete-language execution is not claimed.
 
 # CODEVERSE — Interactive Programming and Machine Learning Simulator

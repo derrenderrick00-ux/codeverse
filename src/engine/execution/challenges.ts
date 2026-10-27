@@ -12,9 +12,9 @@ export function gradeStudentProfile(code:string):Grade {
   const c=val('completed'),p=val('pending'),t=val('total'),percent=val('percentage');
   if(!Number.isInteger(c)||Number(c)<0||!Number.isInteger(p)||Number(p)<0)messages.push('completed and pending must be nonnegative integers.');
   if(typeof c==='number' && typeof p==='number') {
-   if(t!==c+p)messages.push('total must equal completed + pending.');
+   if(t!==c+p)messages.push('The combined assignment count does not match the two input counts.');
    if(c+p<=0)messages.push('Provide at least one assignment to calculate a percentage.');
-   else if(typeof percent!=='number'||Math.abs(percent-100*c/(c+p))>0.0001)messages.push('percentage must equal 100 * completed / total.');
+   else if(typeof percent!=='number'||Math.abs(percent-100*c/(c+p))>0.0001)messages.push('The percentage is inconsistent with the completed and total assignment counts.');
   }
   if(trace.output.length<4)messages.push('Print at least four lines reporting the profile and calculations.');
   const output=trace.output.join(' ');for(const [field,value] of [['name',val('name')],['university',val('university')],['course',val('course')],['percentage',val('percentage')]] as const){if(value!==undefined&&!output.includes(String(value)))messages.push(`Print the calculated ${field} value in your report.`);}
@@ -22,7 +22,7 @@ export function gradeStudentProfile(code:string):Grade {
  } catch(e){return {pass:false,messages:[e instanceof UnsupportedSyntax?`Line ${e.line??'?'}: ${e.message}`:String(e)]};}
 }
 export function gradeBuild(code:string,expectedOutput:string):Grade {
- try {const trace=executeSubset(code);const actual=trace.output.join('\n').trim();return actual===expectedOutput.trim()?{pass:true,messages:['Exact expected output produced.']}:{pass:false,messages:[`Output differs. Received: ${actual || '(empty)'}. Expected: ${expectedOutput}`]};}
+ try {const trace=executeSubset(code);const actual=trace.output.join('\n').trim();return actual===expectedOutput.trim()?{pass:true,messages:['Exact expected output produced.']}:{pass:false,messages:[`Output differs from the target. Received: ${actual || '(empty)'}. Recheck the required calculation and compare with your trace.`]};}
  catch(e){return {pass:false,messages:[e instanceof Error?e.message:String(e)]};}
 }
 
@@ -30,7 +30,7 @@ export function gradeBuild(code:string,expectedOutput:string):Grade {
 export function gradeVariablesBuild(code:string):Grade {
  const graded=gradeBuild(code,'20\n10'); if(!graded.pass)return graded;
  try{const trace=executeSubset(code);const last=trace.events.at(-1)!;const value=(name:string)=>{const id=last.bindings[name];return id?last.objects[id]?.value:undefined;};
- if(value('x')!==20||value('y')!==10)return {pass:false,messages:['x must end at 20 and y at 10. Do not hard-code the output.']};
+ if(value('x')!==20||value('y')!==10)return {pass:false,messages:['The final name bindings disagree with the variable-reference trace. Compute the output instead of hard-coding it.']};
  return {pass:true,messages:['Output and final Python name bindings verified.']};
  }catch(e){return {pass:false,messages:[e instanceof Error?e.message:String(e)]};}
 }

@@ -42,6 +42,15 @@ function openDB():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{if(
 async function transact<T>(mode:IDBTransactionMode,callback:(store:IDBObjectStore)=>IDBRequest<T>):Promise<T>{const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction('settings',mode);const req=callback(tx.objectStore('settings'));let result:T;req.onsuccess=()=>{result=req.result;};req.onerror=()=>reject(req.error);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);tx.oncomplete=()=>{db.close();resolve(result);};});}
 export async function loadProgress():Promise<ProgressMap>{const modern=await transact<unknown>('readonly',s=>s.get(KEY));if(modern!==undefined)return validateMap(modern);const old=await transact<unknown>('readonly',s=>s.get(OLD_KEY));if(old===undefined)return {};const migrated=validateMap(old,true);await saveProgress(migrated);return migrated;}
 export async function saveProgress(value:ProgressMap):Promise<void>{const validated=validateMap(value);await transact('readwrite',s=>s.put(validated,KEY));}
+/** A demonstrated lesson is immutable: revision exercises run in memory only. */
+export function applyLearningEdit(p:Progress,edit:(current:Progress)=>Progress):Progress {
+ return statusOf(p)==='demonstrated'?p:edit({...p});
+}
+/** Highest currently open checkpoint for resuming after a mini-project. */
+export function nextStudyStep(p:Progress):number {
+ for(let step=1;step<=9;step++)if(!completedSteps(p).includes(step)&&canOpenStep(p,step))return step;
+ return 9;
+}
 export function canOpenStep(p:Progress,step:number):boolean{return step===1||completedSteps(p).includes(step-1);}
 export function canOpenLesson(lessons:{id:string}[],id:string,map:ProgressMap):boolean{const index=lessons.findIndex(x=>x.id===id);return index===0 || (index>0 && statusOf(map[lessons[index-1].id]??empty())==='demonstrated');}
 export function canFinishStep(p:Progress,step:number):boolean{
